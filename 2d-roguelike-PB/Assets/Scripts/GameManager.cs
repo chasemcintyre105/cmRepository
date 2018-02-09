@@ -3,16 +3,19 @@ using System.Collections;
 
 using System.Collections.Generic;       //Allows us to use Lists. 
 using UnityEngine.UI;                   //Allows us to use UI. 
-//using UnityEngine.SceneManagement;	//Used in 5.3+
+
+#if !( UNITY_4 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2 || UNITY_5_3)
+	using UnityEngine.SceneManagement;      //Allows us to use SceneManager for 5.4+
+#endif
 
 public class GameManager : MonoBehaviour
 {
 	public float levelStartDelay = 2f;                      //Time to wait before starting level, in seconds.
 	public float turnDelay = 0.1f;                          //Delay between each Player turn.
-//	public int playerFoodPoints = 100;                      //Starting value for Player food points.
+	public int playerFoodPoints = 100;                      //Starting value for Player food points.
 	public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
 	private BoardManager boardScript;                       //Store a reference to our BoardManager which will set up the level.
-	public int playerFoodPoints = 100;
+
 	[HideInInspector] public bool playersTurn = true;
 
 	private Text levelText;                                 //Text to display current level number.
@@ -50,6 +53,7 @@ public class GameManager : MonoBehaviour
 		InitGame();
 	}
 
+	#if ( UNITY_4 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2 || UNITY_5_3)
 	//This is called each time a scene is loaded.
 	void OnLevelWasLoaded(int index)
 	{
@@ -58,32 +62,29 @@ public class GameManager : MonoBehaviour
 		//Call InitGame to initialize our level.
 		InitGame();
 	}
-	//The following three functions are used in 5.3+ instead of OnLevelWasLoaded
-//	//This is called each time a scene is loaded.
-//	void OnLevelFinishedLoading(Scene scene, LoadSceneMode 
-//	                            mode)
-//	{
-//		//Add one to our level number.
-//		level++;
-//		//Call InitGame to initialize our level.
-//		InitGa me();
-//	}
-//	void OnEnable()
-//	{
-//		//Tell our ‘OnLevelFinishedLoading’ function to 
-//		start listening for a scene change event as soon as 
-//			this script is enabled.
-//				SceneManager.sceneLoaded += OnLevelFinishedLoading;
-//	}
-//	void OnDisable()
-//	{
-//		//Tell our ‘OnLevelFinishedLoading’ function to stop 
-//		listening for a scene change event as soon as this 
-//			script is disabled. 
-//				//Remember to always have an unsubscription for every 
-//				delegate you subscribe to!
-//				SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-//	}
+	#else
+
+		//The following three functions are used in 5.4+ instead of OnLevelWasLoaded
+		//This is called each time a scene is loaded.
+		void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+		{
+			//Add one to our level number.
+			level++;
+			//Call InitGame to initialize our level.
+			InitGame();
+		}
+		void OnEnable()
+		{
+			//Tell our ‘OnLevelFinishedLoading’ function to start listening for a scene change event as soon as this script is enabled.
+			SceneManager.sceneLoaded += OnLevelFinishedLoading;
+		}
+		void OnDisable()
+		{
+			//Tell our ‘OnLevelFinishedLoading’ function to stop listening for a scene change event as soon as this script is disabled. 
+			//Remember to always have an unsubscription for every delegate you subscribe to!
+			SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+		}
+	#endif
 
 	//Initializes the game for each level.
 	void InitGame()
@@ -128,7 +129,7 @@ public class GameManager : MonoBehaviour
 	{
 
 		//Set levelText to display number of levels passed and game over message
-		levelText.text = "After " + level + " days, you starved.";
+		levelText.text = "After " + level + " days, you died.";
 
 		//Enable black background image gameObject.
 		levelImage.SetActive(true);
