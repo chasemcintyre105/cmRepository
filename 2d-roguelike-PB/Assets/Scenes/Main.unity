@@ -614,6 +614,22 @@ Prefab:
       propertyPath: gameOverSound
       value: 
       objectReference: {fileID: 8300000, guid: e2beefeb2273f4efe992adf5b8d67c29, type: 3}
+    - target: {fileID: 11471896, guid: 155c743e914809145b01a6704216349d, type: 2}
+      propertyPath: pointsPerFood
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471896, guid: 155c743e914809145b01a6704216349d, type: 2}
+      propertyPath: pointsPerSoda
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471896, guid: 155c743e914809145b01a6704216349d, type: 2}
+      propertyPath: moveTime
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471896, guid: 155c743e914809145b01a6704216349d, type: 2}
+      propertyPath: wallDamage
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 155c743e914809145b01a6704216349d, type: 2}
   m_IsPrefabParent: 0
