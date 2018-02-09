@@ -43,7 +43,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelStartDelay: 2
   turnDelay: 0.1
-  playerFoodPoints: 100
+  playerFoodPoints: 200
   playersTurn: 1
 --- !u!114 &11457768
 MonoBehaviour:
