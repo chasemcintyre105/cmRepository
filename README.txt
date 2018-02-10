@@ -24,6 +24,7 @@ Paul Banyai changes to 2d roguelike
 3) Set platform check for touchOrigin variable in Player script to avoid warning message
 4) Upgraded Player script to detect Unity version and use SceneManager instead of LoadLevel fumction
 5) Upgraded GameManager script to detect Unity version and use SceneManager instead of OnLevelWasLoaded fumction
+6) Fixed invisible soda & starting level for Unity 5.4+
 	The game should now only have at most a single YAML error inherited from the original assets and little to no warnings.
-	I have successfully downgraded back to 5.3.6.
+	I have successfully downgraded back to 5.3.6 and have uploaded a working 2017.3.0 version.
 -------------------------------------------------------------
