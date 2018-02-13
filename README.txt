@@ -28,3 +28,12 @@ Paul Banyai changes to 2d roguelike
 	The game should now only have at most a single YAML error inherited from the original assets and little to no warnings.
 	I have successfully downgraded back to 5.3.6 and have uploaded a working 2017.3.0 version.
 -------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------
+Chase Mcntyre Lab 3
+1)Implemented in script 'PlayerControl'
+2)Implemented in script 'CapsuleController'
+3)Implemented Jump feature in 'CapsuleController'
+  Implemented Fly feature in 'PlayerControl'
