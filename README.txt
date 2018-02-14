@@ -37,3 +37,13 @@ Chase Mcntyre Lab 3
 2)Implemented in script 'CapsuleController'
 3)Implemented Jump feature in 'CapsuleController'
   Implemented Fly feature in 'PlayerControl'
+  
+-------------------------------------------------------------------------------------------------
+assignment3 _Bina Jeong
+
+1) scene of a first-person character and camera
+2) scene of a third-person character and camera 
+3) zoom in and out by using scrollwheel (thrid-person camera)
+4) the cube(thrid-person character) rotate along mouse cursor
+
+-------------------------------------------------------------------------------------------------
