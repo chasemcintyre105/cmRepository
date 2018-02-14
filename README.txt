@@ -37,8 +37,6 @@ Chase Mcntyre Lab 3
 2)Implemented in script 'CapsuleController'
 3)Implemented Jump feature in 'CapsuleController'
   Implemented Fly feature in 'PlayerControl'
-//////////////////////////////////////////
-Branch test  
 -------------------------------------------------------------------------------------------------
 assignment3 _Bina Jeong
 
