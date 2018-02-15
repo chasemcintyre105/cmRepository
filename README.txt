@@ -4,7 +4,9 @@ My favorite music is metal.
 Paul was here.
 binabina
 James McLeod was here
-
+/////////////////////////////////////////////////////////////////////////////////////////////
+Assignment 2
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 --------------------------------------------------------------
 Chase Mcintyre changes
 1)David = new color on pick up
@@ -28,33 +30,26 @@ Paul Banyai changes to 2d roguelike
 	The game should now only have at most a single YAML error inherited from the original assets and little to no warnings.
 	I have successfully downgraded back to 5.3.6 and have uploaded a working 2017.3.0 version.
 -------------------------------------------------------------
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////
+Assignment 3
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -------------------------------------------------------------------------------------------------
-Chase Mcntyre Lab 3
-1)Implemented in script 'PlayerControl'
-2)Implemented in script 'CapsuleController'
-3)Implemented Jump feature in 'CapsuleController'
-  Implemented Fly feature in 'PlayerControl'
-<<<<<<< HEAD
-
+Paul Banyai added simple Part 1 & Part 2 for Unity version 5.3.6f1
+Part_1-5.3.6f1
+Part_2-5.3.6f1
 -------------------------------------------------------------------------------------------------
-
-Bina Jeong assignment3
-=======
-  
--------------------------------------------------------------------------------------------------
-assignment3 _Bina Jeong
->>>>>>> 76f5fbded0f4c64917c32cd2c3cb848042e5dfba
-
-1) scene of a first-person character and camera
-2) scene of a third-person character and camera 
-3) zoom in and out by using scrollwheel (thrid-person camera)
-4) the cube(thrid-person character) rotate along mouse cursor
-
-<<<<<<< HEAD
+assignment3_BH Bina Jeong for Unity version 2017.3.0f3
+1) implemented a new setup of a first-person character and camera
+2) implement a new setup of a third-person character and camera 
+3) zoom in and out by using scrollwheel (third-person camera)
+4) the cube(third-person character) rotate along mouse cursor
 --------------------------------------------------------------------------------------------------
-=======
+Character_Controller James McLeod made a Part 3 for Unity version 2017.3.0f3
+5) Placed player on steep terrain
 -------------------------------------------------------------------------------------------------
->>>>>>> 76f5fbded0f4c64917c32cd2c3cb848042e5dfba
+Chase Mcntyre Lab 3 for Unity version 2017.3.0f3
+[6](1)Implemented in script 'PlayerControl'
+[6](2)Implemented in script 'CapsuleController'
+[6](3)Implemented Jump feature in 'CapsuleController'
+[6](4)Implemented Fly feature in 'PlayerControl'
+--------------------------------------------------------------------------------------------------
