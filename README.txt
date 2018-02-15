@@ -38,14 +38,13 @@ Paul Banyai added simple Part 1 & Part 2 for Unity version 5.3.6f1
 Part_1-5.3.6f1
 Part_2-5.3.6f1
 -------------------------------------------------------------------------------------------------
-assignment3 _Bina Jeong for Unity version 2017.3.0f3
+assignment3_BH Bina Jeong for Unity version 2017.3.0f3
 1) implemented a new setup of a first-person character and camera
 2) implement a new setup of a third-person character and camera 
 3) zoom in and out by using scrollwheel (third-person camera)
 4) the cube(third-person character) rotate along mouse cursor
 --------------------------------------------------------------------------------------------------
-James McLeod made a Part 3 for Unity version 2017.3.0f3
-Character_Controller
+Character_Controller James McLeod made a Part 3 for Unity version 2017.3.0f3
 5) Placed player on steep terrain
 -------------------------------------------------------------------------------------------------
 Chase Mcntyre Lab 3 for Unity version 2017.3.0f3
