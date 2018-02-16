@@ -53,3 +53,5 @@ Chase Mcntyre Lab 3 for Unity version 2017.3.0f3
 [6](3)Implemented Jump feature in 'CapsuleController'
 [6](4)Implemented Fly feature in 'PlayerControl'
 --------------------------------------------------------------------------------------------------
+David Swepson added terrain and trees to the first person camera implementation
+Under the directory David_Assignment3changes
