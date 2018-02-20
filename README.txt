@@ -53,5 +53,14 @@ Chase Mcntyre Lab 3 for Unity version 2017.3.0f3
 [6](3)Implemented Jump feature in 'CapsuleController'
 [6](4)Implemented Fly feature in 'PlayerControl'
 --------------------------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////////////////////
+Assignment 4
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------------------------------
 David Swepson added terrain and trees to the first person camera implementation
 Under the directory David_Assignment3changes
+--------------------------------------------------------------------------------------------------
+Chase Mcintyre created terrain using a height map from google, modified by GIMP, and imported into Unity.
+The terrain itself has been heavily modified from the original via shaping, texturing, coloring, adding
+in scenery objects, and adding trees.
+The file is in the directory titled 'ChaseMcintyreTerrainProject'
