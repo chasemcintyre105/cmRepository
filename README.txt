@@ -64,3 +64,7 @@ Chase Mcintyre created terrain using a height map from google, modified by GIMP,
 The terrain itself has been heavily modified from the original via shaping, texturing, coloring, adding
 in scenery objects, and adding trees.
 The file is in the directory titled 'ChaseMcintyreTerrainProject'
+--------------------------------------------------------------------------------------------------
+Bina Jeong added Terrain "assingment4"
+added texture, tree, first person camera
+--------------------------------------------------------------------------------------------------
