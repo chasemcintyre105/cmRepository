@@ -65,6 +65,12 @@ The terrain itself has been heavily modified from the original via shaping, text
 in scenery objects, and adding trees.
 The file is in the directory titled 'ChaseMcintyreTerrainProject'
 --------------------------------------------------------------------------------------------------
-Bina Jeong added Terrain "assingment4"
-added texture, tree, first person camera
+James Mcleod createed a 3D terrain large enough to be explored by a player, used the terrain shaping tools
+to ensure that the terrain can be comfortably navigated by the player, and colored the terrain.
+--------------------------------------------------------------------------------------------------
+Bina Jeong changed the terrain for the roll-a-ball, water in a large hole, and trees. 
+--------------------------------------------------------------------------------------------------
+Paul Banyai renamed Bina's folder and restored from partial deletion and replacement a slightly modified
+version of James's terrain I had been able to down grade to 5.5. I had also added some water, a beach
+transition, a few puddles, and some palm trees.
 --------------------------------------------------------------------------------------------------
