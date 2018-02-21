@@ -71,5 +71,6 @@ to ensure that the terrain can be comfortably navigated by the player, and color
 Bina Jeong changed the terrain for the roll-a-ball, water in a large hole, and trees. 
 --------------------------------------------------------------------------------------------------
 Paul Banyai renamed Bina's folder and restored from partial deletion and replacement a slightly modified
-version of James's terrain I had beenable to down grade to 5.5. I had added some water, a beach transition,
-a few puddles, and some palm trees.
+version of James's terrain I had been able to down grade to 5.5. I had also added some water, a beach
+transition, a few puddles, and some palm trees.
+--------------------------------------------------------------------------------------------------
