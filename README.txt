@@ -74,3 +74,10 @@ Paul Banyai renamed Bina's folder and restored from partial deletion and replace
 version of James's terrain I had been able to down grade to 5.5. I had also added some water, a beach
 transition, a few puddles, and some palm trees.
 --------------------------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////////////////////
+Assignment 5
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------------------------------
+Chase Mcintyre imported a skeleton asset, made the flow of animations, allowed the skeleton to 'hit'
+the player with a trigger collider, and allowed the player to 'hit' the skeleton with a trigger collider.
+--------------------------------------------------------------------------------------------------
