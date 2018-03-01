@@ -81,3 +81,5 @@ Assignment 5
 Chase Mcintyre imported a skeleton asset, made the flow of animations, allowed the skeleton to 'hit'
 the player with a trigger collider, and allowed the player to 'hit' the skeleton with a trigger collider.
 --------------------------------------------------------------------------------------------------
+Bina Jeong added dialogue to skeleton "I found you!" 
+--------------------------------------------------------------------------------------------------
