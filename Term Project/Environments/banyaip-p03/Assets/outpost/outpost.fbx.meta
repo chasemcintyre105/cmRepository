@@ -1,0 +1,801 @@
+fileFormatVersion: 2
+guid: 357e5bdd08b8c354f83e909091a05906
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: base_plank_1
+    100002: base_plank_2
+    100004: base_plank_3
+    100006: base_plank_4
+    100008: base_plank_5
+    100010: base_plank_6
+    100012: base_plank_7
+    100014: chimney
+    100016: door
+    100018: doorFrame_1
+    100020: doorFrame_2
+    100022: doorFrame_3
+    100024: hut_back_wall
+    100026: hut_corner_1
+    100028: hut_corner_2
+    100030: hut_corner_3
+    100032: hut_corner_4
+    100034: hut_front_top
+    100036: hut_front_wall
+    100038: hut_left_wall
+    100040: hut_right_wall
+    100042: //RootNode
+    100044: porch_roof
+    100046: porch_support_1
+    100048: porch_support_2
+    100050: ramp_base
+    100052: ramp_end_1
+    100054: ramp_end_2
+    100056: ramp_group
+    100058: ramp_slat_1
+    100060: ramp_slat_10
+    100062: ramp_slat_11
+    100064: ramp_slat_12
+    100066: ramp_slat_2
+    100068: ramp_slat_3
+    100070: ramp_slat_4
+    100072: ramp_slat_5
+    100074: ramp_slat_6
+    100076: ramp_slat_7
+    100078: ramp_slat_8
+    100080: ramp_slat_9
+    100082: roof_left
+    100084: roof_right
+    100086: roof_support_back
+    100088: roof_support_front
+    100090: stilt_1
+    100092: stilt_2
+    100094: stilt_3
+    100096: stilt_4
+    100098: stilt_5
+    100100: stilt_6
+    100102: stilt_7
+    100104: stilt_support_1
+    100106: stilt_support_2
+    400000: base_plank_1
+    400002: base_plank_2
+    400004: base_plank_3
+    400006: base_plank_4
+    400008: base_plank_5
+    400010: base_plank_6
+    400012: base_plank_7
+    400014: chimney
+    400016: door
+    400018: doorFrame_1
+    400020: doorFrame_2
+    400022: doorFrame_3
+    400024: hut_back_wall
+    400026: hut_corner_1
+    400028: hut_corner_2
+    400030: hut_corner_3
+    400032: hut_corner_4
+    400034: hut_front_top
+    400036: hut_front_wall
+    400038: hut_left_wall
+    400040: hut_right_wall
+    400042: //RootNode
+    400044: porch_roof
+    400046: porch_support_1
+    400048: porch_support_2
+    400050: ramp_base
+    400052: ramp_end_1
+    400054: ramp_end_2
+    400056: ramp_group
+    400058: ramp_slat_1
+    400060: ramp_slat_10
+    400062: ramp_slat_11
+    400064: ramp_slat_12
+    400066: ramp_slat_2
+    400068: ramp_slat_3
+    400070: ramp_slat_4
+    400072: ramp_slat_5
+    400074: ramp_slat_6
+    400076: ramp_slat_7
+    400078: ramp_slat_8
+    400080: ramp_slat_9
+    400082: roof_left
+    400084: roof_right
+    400086: roof_support_back
+    400088: roof_support_front
+    400090: stilt_1
+    400092: stilt_2
+    400094: stilt_3
+    400096: stilt_4
+    400098: stilt_5
+    400100: stilt_6
+    400102: stilt_7
+    400104: stilt_support_1
+    400106: stilt_support_2
+    2300000: base_plank_1
+    2300002: base_plank_2
+    2300004: base_plank_3
+    2300006: base_plank_4
+    2300008: base_plank_5
+    2300010: base_plank_6
+    2300012: base_plank_7
+    2300014: chimney
+    2300016: door
+    2300018: doorFrame_1
+    2300020: doorFrame_2
+    2300022: doorFrame_3
+    2300024: hut_back_wall
+    2300026: hut_corner_1
+    2300028: hut_corner_2
+    2300030: hut_corner_3
+    2300032: hut_corner_4
+    2300034: hut_front_top
+    2300036: hut_front_wall
+    2300038: hut_left_wall
+    2300040: hut_right_wall
+    2300042: porch_roof
+    2300044: porch_support_1
+    2300046: porch_support_2
+    2300048: ramp_base
+    2300050: ramp_end_1
+    2300052: ramp_end_2
+    2300054: ramp_slat_1
+    2300056: ramp_slat_10
+    2300058: ramp_slat_11
+    2300060: ramp_slat_12
+    2300062: ramp_slat_2
+    2300064: ramp_slat_3
+    2300066: ramp_slat_4
+    2300068: ramp_slat_5
+    2300070: ramp_slat_6
+    2300072: ramp_slat_7
+    2300074: ramp_slat_8
+    2300076: ramp_slat_9
+    2300078: roof_left
+    2300080: roof_right
+    2300082: roof_support_back
+    2300084: roof_support_front
+    2300086: stilt_1
+    2300088: stilt_2
+    2300090: stilt_3
+    2300092: stilt_4
+    2300094: stilt_5
+    2300096: stilt_6
+    2300098: stilt_7
+    2300100: stilt_support_1
+    2300102: stilt_support_2
+    3300000: base_plank_1
+    3300002: base_plank_2
+    3300004: base_plank_3
+    3300006: base_plank_4
+    3300008: base_plank_5
+    3300010: base_plank_6
+    3300012: base_plank_7
+    3300014: chimney
+    3300016: door
+    3300018: doorFrame_1
+    3300020: doorFrame_2
+    3300022: doorFrame_3
+    3300024: hut_back_wall
+    3300026: hut_corner_1
+    3300028: hut_corner_2
+    3300030: hut_corner_3
+    3300032: hut_corner_4
+    3300034: hut_front_top
+    3300036: hut_front_wall
+    3300038: hut_left_wall
+    3300040: hut_right_wall
+    3300042: porch_roof
+    3300044: porch_support_1
+    3300046: porch_support_2
+    3300048: ramp_base
+    3300050: ramp_end_1
+    3300052: ramp_end_2
+    3300054: ramp_slat_1
+    3300056: ramp_slat_10
+    3300058: ramp_slat_11
+    3300060: ramp_slat_12
+    3300062: ramp_slat_2
+    3300064: ramp_slat_3
+    3300066: ramp_slat_4
+    3300068: ramp_slat_5
+    3300070: ramp_slat_6
+    3300072: ramp_slat_7
+    3300074: ramp_slat_8
+    3300076: ramp_slat_9
+    3300078: roof_left
+    3300080: roof_right
+    3300082: roof_support_back
+    3300084: roof_support_front
+    3300086: stilt_1
+    3300088: stilt_2
+    3300090: stilt_3
+    3300092: stilt_4
+    3300094: stilt_5
+    3300096: stilt_6
+    3300098: stilt_7
+    3300100: stilt_support_1
+    3300102: stilt_support_2
+    4300000: roof_left
+    4300002: roof_support_front
+    4300004: roof_support_back
+    4300006: hut_corner_1
+    4300008: stilt_1
+    4300010: chimney
+    4300012: hut_front_wall
+    4300014: porch_roof
+    4300016: doorFrame_1
+    4300018: doorFrame_2
+    4300020: doorFrame_3
+    4300022: porch_support_1
+    4300024: hut_back_wall
+    4300026: hut_left_wall
+    4300028: hut_front_top
+    4300030: base_plank_1
+    4300032: base_plank_7
+    4300034: base_plank_6
+    4300036: base_plank_5
+    4300038: base_plank_4
+    4300040: base_plank_3
+    4300042: base_plank_2
+    4300044: stilt_2
+    4300046: stilt_4
+    4300048: stilt_6
+    4300050: stilt_5
+    4300052: stilt_support_2
+    4300054: stilt_3
+    4300056: stilt_support_1
+    4300058: stilt_7
+    4300060: ramp_base
+    4300062: ramp_slat_1
+    4300064: ramp_slat_2
+    4300066: ramp_slat_3
+    4300068: ramp_slat_4
+    4300070: ramp_slat_5
+    4300072: ramp_slat_6
+    4300074: ramp_slat_7
+    4300076: ramp_slat_8
+    4300078: ramp_slat_9
+    4300080: ramp_slat_10
+    4300082: ramp_slat_11
+    4300084: ramp_slat_12
+    4300086: ramp_end_1
+    4300088: roof_right
+    4300090: hut_corner_2
+    4300092: hut_corner_3
+    4300094: hut_corner_4
+    4300096: porch_support_2
+    4300098: hut_right_wall
+    4300100: ramp_end_2
+    4300102: door
+    6400000: base_plank_1
+    6400002: base_plank_2
+    6400004: base_plank_3
+    6400006: base_plank_4
+    6400008: base_plank_5
+    6400010: base_plank_6
+    6400012: base_plank_7
+    6400014: chimney
+    6400016: door
+    6400018: doorFrame_1
+    6400020: doorFrame_2
+    6400022: doorFrame_3
+    6400024: hut_back_wall
+    6400026: hut_corner_1
+    6400028: hut_corner_2
+    6400030: hut_corner_3
+    6400032: hut_corner_4
+    6400034: hut_front_top
+    6400036: hut_front_wall
+    6400038: hut_left_wall
+    6400040: hut_right_wall
+    6400042: porch_roof
+    6400044: porch_support_1
+    6400046: porch_support_2
+    6400048: ramp_base
+    6400050: ramp_end_1
+    6400052: ramp_end_2
+    6400054: ramp_slat_1
+    6400056: ramp_slat_10
+    6400058: ramp_slat_11
+    6400060: ramp_slat_12
+    6400062: ramp_slat_2
+    6400064: ramp_slat_3
+    6400066: ramp_slat_4
+    6400068: ramp_slat_5
+    6400070: ramp_slat_6
+    6400072: ramp_slat_7
+    6400074: ramp_slat_8
+    6400076: ramp_slat_9
+    6400078: roof_left
+    6400080: roof_right
+    6400082: roof_support_back
+    6400084: roof_support_front
+    6400086: stilt_1
+    6400088: stilt_2
+    6400090: stilt_3
+    6400092: stilt_4
+    6400094: stilt_5
+    6400096: stilt_6
+    6400098: stilt_7
+    6400100: stilt_support_1
+    6400102: stilt_support_2
+    7400000: idle
+    7400002: dooropen
+    7400004: doorshut
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_plank_1
+        weight: 1
+      - path: base_plank_2
+        weight: 1
+      - path: base_plank_3
+        weight: 1
+      - path: base_plank_4
+        weight: 1
+      - path: base_plank_5
+        weight: 1
+      - path: base_plank_6
+        weight: 1
+      - path: base_plank_7
+        weight: 1
+      - path: chimney
+        weight: 1
+      - path: door
+        weight: 1
+      - path: doorFrame_1
+        weight: 1
+      - path: doorFrame_2
+        weight: 1
+      - path: doorFrame_3
+        weight: 1
+      - path: hut_back_wall
+        weight: 1
+      - path: hut_corner_1
+        weight: 1
+      - path: hut_corner_2
+        weight: 1
+      - path: hut_corner_3
+        weight: 1
+      - path: hut_corner_4
+        weight: 1
+      - path: hut_front_top
+        weight: 1
+      - path: hut_front_wall
+        weight: 1
+      - path: hut_left_wall
+        weight: 1
+      - path: hut_right_wall
+        weight: 1
+      - path: porch_roof
+        weight: 1
+      - path: porch_support_1
+        weight: 1
+      - path: porch_support_2
+        weight: 1
+      - path: ramp_end_1
+        weight: 1
+      - path: ramp_end_2
+        weight: 1
+      - path: ramp_group
+        weight: 1
+      - path: ramp_group/ramp_base
+        weight: 1
+      - path: ramp_group/ramp_slat_1
+        weight: 1
+      - path: ramp_group/ramp_slat_2
+        weight: 1
+      - path: ramp_group/ramp_slat_3
+        weight: 1
+      - path: ramp_group/ramp_slat_4
+        weight: 1
+      - path: ramp_group/ramp_slat_5
+        weight: 1
+      - path: ramp_group/ramp_slat_6
+        weight: 1
+      - path: ramp_group/ramp_slat_7
+        weight: 1
+      - path: ramp_group/ramp_slat_8
+        weight: 1
+      - path: ramp_group/ramp_slat_9
+        weight: 1
+      - path: ramp_group/ramp_slat_10
+        weight: 1
+      - path: ramp_group/ramp_slat_11
+        weight: 1
+      - path: ramp_group/ramp_slat_12
+        weight: 1
+      - path: roof_left
+        weight: 1
+      - path: roof_right
+        weight: 1
+      - path: roof_support_back
+        weight: 1
+      - path: roof_support_front
+        weight: 1
+      - path: stilt_1
+        weight: 1
+      - path: stilt_2
+        weight: 1
+      - path: stilt_3
+        weight: 1
+      - path: stilt_4
+        weight: 1
+      - path: stilt_5
+        weight: 1
+      - path: stilt_6
+        weight: 1
+      - path: stilt_7
+        weight: 1
+      - path: stilt_support_1
+        weight: 1
+      - path: stilt_support_2
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dooropen
+      takeName: Take 001
+      firstFrame: 3
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_plank_1
+        weight: 1
+      - path: base_plank_2
+        weight: 1
+      - path: base_plank_3
+        weight: 1
+      - path: base_plank_4
+        weight: 1
+      - path: base_plank_5
+        weight: 1
+      - path: base_plank_6
+        weight: 1
+      - path: base_plank_7
+        weight: 1
+      - path: chimney
+        weight: 1
+      - path: door
+        weight: 1
+      - path: doorFrame_1
+        weight: 1
+      - path: doorFrame_2
+        weight: 1
+      - path: doorFrame_3
+        weight: 1
+      - path: hut_back_wall
+        weight: 1
+      - path: hut_corner_1
+        weight: 1
+      - path: hut_corner_2
+        weight: 1
+      - path: hut_corner_3
+        weight: 1
+      - path: hut_corner_4
+        weight: 1
+      - path: hut_front_top
+        weight: 1
+      - path: hut_front_wall
+        weight: 1
+      - path: hut_left_wall
+        weight: 1
+      - path: hut_right_wall
+        weight: 1
+      - path: porch_roof
+        weight: 1
+      - path: porch_support_1
+        weight: 1
+      - path: porch_support_2
+        weight: 1
+      - path: ramp_end_1
+        weight: 1
+      - path: ramp_end_2
+        weight: 1
+      - path: ramp_group
+        weight: 1
+      - path: ramp_group/ramp_base
+        weight: 1
+      - path: ramp_group/ramp_slat_1
+        weight: 1
+      - path: ramp_group/ramp_slat_2
+        weight: 1
+      - path: ramp_group/ramp_slat_3
+        weight: 1
+      - path: ramp_group/ramp_slat_4
+        weight: 1
+      - path: ramp_group/ramp_slat_5
+        weight: 1
+      - path: ramp_group/ramp_slat_6
+        weight: 1
+      - path: ramp_group/ramp_slat_7
+        weight: 1
+      - path: ramp_group/ramp_slat_8
+        weight: 1
+      - path: ramp_group/ramp_slat_9
+        weight: 1
+      - path: ramp_group/ramp_slat_10
+        weight: 1
+      - path: ramp_group/ramp_slat_11
+        weight: 1
+      - path: ramp_group/ramp_slat_12
+        weight: 1
+      - path: roof_left
+        weight: 1
+      - path: roof_right
+        weight: 1
+      - path: roof_support_back
+        weight: 1
+      - path: roof_support_front
+        weight: 1
+      - path: stilt_1
+        weight: 1
+      - path: stilt_2
+        weight: 1
+      - path: stilt_3
+        weight: 1
+      - path: stilt_4
+        weight: 1
+      - path: stilt_5
+        weight: 1
+      - path: stilt_6
+        weight: 1
+      - path: stilt_7
+        weight: 1
+      - path: stilt_support_1
+        weight: 1
+      - path: stilt_support_2
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: doorshut
+      takeName: Take 001
+      firstFrame: 13
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base_plank_1
+        weight: 1
+      - path: base_plank_2
+        weight: 1
+      - path: base_plank_3
+        weight: 1
+      - path: base_plank_4
+        weight: 1
+      - path: base_plank_5
+        weight: 1
+      - path: base_plank_6
+        weight: 1
+      - path: base_plank_7
+        weight: 1
+      - path: chimney
+        weight: 1
+      - path: door
+        weight: 1
+      - path: doorFrame_1
+        weight: 1
+      - path: doorFrame_2
+        weight: 1
+      - path: doorFrame_3
+        weight: 1
+      - path: hut_back_wall
+        weight: 1
+      - path: hut_corner_1
+        weight: 1
+      - path: hut_corner_2
+        weight: 1
+      - path: hut_corner_3
+        weight: 1
+      - path: hut_corner_4
+        weight: 1
+      - path: hut_front_top
+        weight: 1
+      - path: hut_front_wall
+        weight: 1
+      - path: hut_left_wall
+        weight: 1
+      - path: hut_right_wall
+        weight: 1
+      - path: porch_roof
+        weight: 1
+      - path: porch_support_1
+        weight: 1
+      - path: porch_support_2
+        weight: 1
+      - path: ramp_end_1
+        weight: 1
+      - path: ramp_end_2
+        weight: 1
+      - path: ramp_group
+        weight: 1
+      - path: ramp_group/ramp_base
+        weight: 1
+      - path: ramp_group/ramp_slat_1
+        weight: 1
+      - path: ramp_group/ramp_slat_2
+        weight: 1
+      - path: ramp_group/ramp_slat_3
+        weight: 1
+      - path: ramp_group/ramp_slat_4
+        weight: 1
+      - path: ramp_group/ramp_slat_5
+        weight: 1
+      - path: ramp_group/ramp_slat_6
+        weight: 1
+      - path: ramp_group/ramp_slat_7
+        weight: 1
+      - path: ramp_group/ramp_slat_8
+        weight: 1
+      - path: ramp_group/ramp_slat_9
+        weight: 1
+      - path: ramp_group/ramp_slat_10
+        weight: 1
+      - path: ramp_group/ramp_slat_11
+        weight: 1
+      - path: ramp_group/ramp_slat_12
+        weight: 1
+      - path: roof_left
+        weight: 1
+      - path: roof_right
+        weight: 1
+      - path: roof_support_back
+        weight: 1
+      - path: roof_support_front
+        weight: 1
+      - path: stilt_1
+        weight: 1
+      - path: stilt_2
+        weight: 1
+      - path: stilt_3
+        weight: 1
+      - path: stilt_4
+        weight: 1
+      - path: stilt_5
+        weight: 1
+      - path: stilt_6
+        weight: 1
+      - path: stilt_7
+        weight: 1
+      - path: stilt_support_1
+        weight: 1
+      - path: stilt_support_2
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1.4
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

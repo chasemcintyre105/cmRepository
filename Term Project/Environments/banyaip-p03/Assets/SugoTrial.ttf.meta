@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 862a1ae1df943ce4e91aceaeb4083be0
+timeCreated: 1494527348
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Sugo
+  fontNames:
+  - Sugo
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
