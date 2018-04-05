@@ -89,3 +89,11 @@ Assignment 6 & 7
 --------------------------------------------------------------------------------------------------
 James Mcleod created 5 chess pieces in blender and imported them into Unity
 --------------------------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////////////////////
+Assignment 8
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+--------------------------------------------------------------------------------------------------
+Bina Jeong did Part 1 and a partially working "pause" for Part 2 in Part 1's different scene.
+Part 3 was done in Assignment 5 and is added as another scene to load.
+Chase Mcintyre finished Part 2's pause functionality in the Part 3 scene and added an item for Part 4.
+--------------------------------------------------------------------------------------------------
