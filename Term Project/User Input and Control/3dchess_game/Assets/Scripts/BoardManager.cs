@@ -111,7 +111,7 @@ public class BoardManager : MonoBehaviour
 
 	private void SpawnChessman(int index,int x,int y) // Spawns pieces
 	{
-		GameObject go = Instantiate(chessmanPrefabs[index], GetTileCenter(x,y), Quaternion.Euler(90, 5, 0)) as GameObject;
+		GameObject go = Instantiate(chessmanPrefabs[index], GetTileCenter(x,y), Quaternion.Euler(90, 0, 0)) as GameObject;
 		go.transform.SetParent (transform);
 		Chessmans[x,y] = go.GetComponent<Chessman> ();
 		Chessmans[x,y].SetPosition (x, y);
@@ -147,7 +147,7 @@ public class BoardManager : MonoBehaviour
 
 	}
 
-	private Vector3 GetTileCenter(int x, int y)  //Spawn Position Function
+	private Vector3 GetTileCenter(int x, int y)  //Spawn Position Function, gets the center point on the tile
 	{
 		Vector3 origin = Vector3.zero;
 		origin.x += (TILE_SIZE * x) + TILE_OFFSET;
