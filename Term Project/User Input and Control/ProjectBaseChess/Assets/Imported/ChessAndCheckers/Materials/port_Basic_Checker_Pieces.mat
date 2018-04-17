@@ -1,0 +1,315 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: port_Basic_Checker_Pieces
+  m_Shader: {fileID: 4800000, guid: e0ebf2b9bee384b4d8ad26f8e1253221, type: 3}
+  m_ShaderKeywords: _LIGHTMAPPING_REALTIME _NORMALMAP _SPECGLOSSMAP
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: faafbf2ef695e174c901e93e0266102f, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 5c001d5ed51504b468b2dbf3c1bf0531, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormalMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ReplacementMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BRDF
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DepthMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AnisoSpecMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecGlossMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 20f025b1db940dc48926fb2040b04ca5, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 6ca22937e6c1d2a4bbeac6f0a49a53b2, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Cube
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CompositeMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
+      data:
+        first:
+          name: _Cutoff
+        second: .5
+      data:
+        first:
+          name: _Shininess
+        second: .078125
+      data:
+        first:
+          name: _Lightmapping
+        second: 1
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: 0
+      data:
+        first:
+          name: _BumpScale
+        second: 1.04999995
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+          name: _OcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: 1
+      data:
+        first:
+          name: _UVSec
+        second: 0
+      data:
+        first:
+          name: _EmissionScaleUI
+        second: 0
+      data:
+        first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Dissolve
+        second: 0
+      data:
+        first:
+          name: _BorderSize
+        second: .00999999978
+      data:
+        first:
+          name: _SaturationAmount
+        second: 1
+      data:
+        first:
+          name: _BrightnessAmount
+        second: 1
+      data:
+        first:
+          name: _ContrastAmount
+        second: 1
+      data:
+        first:
+          name: _SSSScale
+        second: 1
+      data:
+        first:
+          name: _TranslucencyOffset
+        second: 0
+      data:
+        first:
+          name: _TranslucencyPower
+        second: 1
+      data:
+        first:
+          name: _TranslucencyRadius
+        second: 1
+      data:
+        first:
+          name: _AnisoOffset
+        second: 0
+      data:
+        first:
+          name: _VertColor
+        second: 0
+      data:
+        first:
+          name: _Skin
+        second: 0
+      data:
+        first:
+          name: _ColorAdjustment
+        second: 0
+      data:
+        first:
+          name: _ColorReplacement
+        second: 0
+      data:
+        first:
+          name: _SSS
+        second: 0
+      data:
+        first:
+          name: _Translucency
+        second: 0
+      data:
+        first:
+          name: _CullMode
+        second: 0
+      data:
+        first:
+          name: _DissolveMode
+        second: 0
+      data:
+        first:
+          name: _SpecularMode
+        second: 0
+      data:
+        first:
+          name: _FrezPow
+        second: .25
+      data:
+        first:
+          name: _RimPower
+        second: 3
+      data:
+        first:
+          name: _SubsurfacePower
+        second: 3
+    m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _Color
+        second: {r: .588235319, g: .588235319, b: .588235319, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _PrimaryColor
+        second: {r: 1, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _SecondaryColor
+        second: {r: 0, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _TertiaryColor
+        second: {r: 0, g: 0, b: 1, a: 0}
+      data:
+        first:
+          name: _AnisoSpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _RimColor
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _SubsurfaceColor
+        second: {r: 0, g: 0, b: 0, a: 0}
