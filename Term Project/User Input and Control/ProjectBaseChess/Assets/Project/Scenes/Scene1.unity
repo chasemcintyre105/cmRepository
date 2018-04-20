@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 86121329}
   - component: {fileID: 86121327}
   - component: {fileID: 86121328}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: ChessPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,6 +278,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 29.9999, y: 0, z: 0}
+--- !u!1001 &1379821771
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4167466679145242, guid: 1af029b4e13b3da43b27849272e05863, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167466679145242, guid: 1af029b4e13b3da43b27849272e05863, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167466679145242, guid: 1af029b4e13b3da43b27849272e05863, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167466679145242, guid: 1af029b4e13b3da43b27849272e05863, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167466679145242, guid: 1af029b4e13b3da43b27849272e05863, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167466679145242, guid: 1af029b4e13b3da43b27849272e05863, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167466679145242, guid: 1af029b4e13b3da43b27849272e05863, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167466679145242, guid: 1af029b4e13b3da43b27849272e05863, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1af029b4e13b3da43b27849272e05863, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1647079796
 GameObject:
   m_ObjectHideFlags: 0

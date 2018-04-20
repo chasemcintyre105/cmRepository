@@ -262,5 +262,5 @@
 		}
 	}
 
-	CustomEditor "PortStandardShaderGUI"
+//	CustomEditor "PortStandardShaderGUI"
 }
