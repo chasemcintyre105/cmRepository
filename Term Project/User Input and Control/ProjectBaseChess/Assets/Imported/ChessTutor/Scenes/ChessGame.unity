@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -184,7 +184,6 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 431954f36fdbade4ca6eea24508b8399, type: 3}
-  m_RootGameObject: {fileID: 2054822346}
   m_IsPrefabParent: 0
 --- !u!1 &784105058
 GameObject:
@@ -329,7 +328,7 @@ GameObject:
   - component: {fileID: 1267576607}
   - component: {fileID: 1267576605}
   - component: {fileID: 1267576606}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: ChessPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
