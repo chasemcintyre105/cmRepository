@@ -1,6 +1,6 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Project
 {
@@ -14,8 +14,7 @@ namespace Project
 
 		private Chessman selectedChessman;
 
-		private const float TILE_SIZE = 1.0f;
-		//tile dimensions
+		private const float TILE_SIZE = 1.0f;		//tile dimensions
 		private const float TILE_OFFSET = 0.5f;
 
 		private int selectionX = -1;

@@ -13,6 +13,7 @@ TagManager:
   - PiecePlayer1
   - 1
   - -1
+  - ChessPlane
   layers:
   - Default
   - TransparentFX
