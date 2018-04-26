@@ -42,7 +42,7 @@ namespace Project
 			}
 		}
 
-		public void Hidehighlights () //responsible for turning off highlights if not needed
+		public void HideHighlights () //responsible for turning off highlights if not needed
 		{
 			foreach (GameObject go in highlights)
 				go.SetActive (false);

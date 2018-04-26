@@ -361,6 +361,7 @@ MonoBehaviour:
   - {fileID: 1479989141987308, guid: 6f3013651623b446c91ae9d7270ba7b5, type: 2}
   - {fileID: 1291360291826688, guid: f4daf56a2ac5e44b889a2ead6ccc262a, type: 2}
   - {fileID: 1031636751254628, guid: 7302be28962c243678252e7c6255fdbc, type: 2}
+  selectedMat: {fileID: 2100000, guid: bc04e0cb4e7f11b44aa1877dc3781395, type: 2}
   isWhiteTurn: 1
 --- !u!4 &1647079798
 Transform:
