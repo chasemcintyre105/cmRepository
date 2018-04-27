@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: af55134f262bc084dbc22b77b29e3582
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: port_Basic_Chess_Set_Bishop_Black
+    100004: port_Basic_Chess_Set_Bishop_White
+    100006: port_Basic_Chess_Set_Board
+    100008: port_Basic_Chess_Set_King_Black
+    100010: port_Basic_Chess_Set_King_White
+    100012: port_Basic_Chess_Set_Knight_Black
+    100014: port_Basic_Chess_Set_Knight_White
+    100016: port_Basic_Chess_Set_Pawn_Black
+    100018: port_Basic_Chess_Set_Pawn_White
+    100020: port_Basic_Chess_Set_Queen_Black
+    100022: port_Basic_Chess_Set_Queen_White
+    100024: port_Basic_Chess_Set_Rook_Black
+    100026: port_Basic_Chess_Set_Rook_White
+    400000: //RootNode
+    400002: port_Basic_Chess_Set_Bishop_Black
+    400004: port_Basic_Chess_Set_Bishop_White
+    400006: port_Basic_Chess_Set_Board
+    400008: port_Basic_Chess_Set_King_Black
+    400010: port_Basic_Chess_Set_King_White
+    400012: port_Basic_Chess_Set_Knight_Black
+    400014: port_Basic_Chess_Set_Knight_White
+    400016: port_Basic_Chess_Set_Pawn_Black
+    400018: port_Basic_Chess_Set_Pawn_White
+    400020: port_Basic_Chess_Set_Queen_Black
+    400022: port_Basic_Chess_Set_Queen_White
+    400024: port_Basic_Chess_Set_Rook_Black
+    400026: port_Basic_Chess_Set_Rook_White
+    2300000: port_Basic_Chess_Set_Bishop_Black
+    2300002: port_Basic_Chess_Set_Bishop_White
+    2300004: port_Basic_Chess_Set_Board
+    2300006: port_Basic_Chess_Set_King_Black
+    2300008: port_Basic_Chess_Set_King_White
+    2300010: port_Basic_Chess_Set_Knight_Black
+    2300012: port_Basic_Chess_Set_Knight_White
+    2300014: port_Basic_Chess_Set_Pawn_Black
+    2300016: port_Basic_Chess_Set_Pawn_White
+    2300018: port_Basic_Chess_Set_Queen_Black
+    2300020: port_Basic_Chess_Set_Queen_White
+    2300022: port_Basic_Chess_Set_Rook_Black
+    2300024: port_Basic_Chess_Set_Rook_White
+    3300000: port_Basic_Chess_Set_Bishop_Black
+    3300002: port_Basic_Chess_Set_Bishop_White
+    3300004: port_Basic_Chess_Set_Board
+    3300006: port_Basic_Chess_Set_King_Black
+    3300008: port_Basic_Chess_Set_King_White
+    3300010: port_Basic_Chess_Set_Knight_Black
+    3300012: port_Basic_Chess_Set_Knight_White
+    3300014: port_Basic_Chess_Set_Pawn_Black
+    3300016: port_Basic_Chess_Set_Pawn_White
+    3300018: port_Basic_Chess_Set_Queen_Black
+    3300020: port_Basic_Chess_Set_Queen_White
+    3300022: port_Basic_Chess_Set_Rook_Black
+    3300024: port_Basic_Chess_Set_Rook_White
+    4300000: port_Basic_Chess_Set_Board
+    4300002: port_Basic_Chess_Set_Pawn_White
+    4300004: port_Basic_Chess_Set_Rook_White
+    4300006: port_Basic_Chess_Set_Bishop_White
+    4300008: port_Basic_Chess_Set_Queen_White
+    4300010: port_Basic_Chess_Set_King_White
+    4300012: port_Basic_Chess_Set_Knight_White
+    4300014: port_Basic_Chess_Set_Pawn_Black
+    4300016: port_Basic_Chess_Set_Rook_Black
+    4300018: port_Basic_Chess_Set_Knight_Black
+    4300020: port_Basic_Chess_Set_Bishop_Black
+    4300022: port_Basic_Chess_Set_Queen_Black
+    4300024: port_Basic_Chess_Set_King_Black
+    6400000: port_Basic_Chess_Set_Bishop_Black
+    6400002: port_Basic_Chess_Set_Bishop_White
+    6400004: port_Basic_Chess_Set_Board
+    6400006: port_Basic_Chess_Set_King_Black
+    6400008: port_Basic_Chess_Set_King_White
+    6400010: port_Basic_Chess_Set_Knight_Black
+    6400012: port_Basic_Chess_Set_Knight_White
+    6400014: port_Basic_Chess_Set_Pawn_Black
+    6400016: port_Basic_Chess_Set_Pawn_White
+    6400018: port_Basic_Chess_Set_Queen_Black
+    6400020: port_Basic_Chess_Set_Queen_White
+    6400022: port_Basic_Chess_Set_Rook_Black
+    6400024: port_Basic_Chess_Set_Rook_White
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 2
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
