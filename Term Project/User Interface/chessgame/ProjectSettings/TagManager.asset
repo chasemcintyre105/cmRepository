@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - chessplane
+  - ButtonPanel
+  - QueenButton
+  - RookButton
+  - BishopButton
+  - KnightButton
+  - EndGamePanel
+  - whitewintext
+  - blackwintext
   layers:
   - Default
   - TransparentFX

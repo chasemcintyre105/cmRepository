@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class BoardManager : MonoBehaviour {
 
@@ -22,15 +22,39 @@ public class BoardManager : MonoBehaviour {
 	public List<GameObject> chessmanPrefabs;
 	private List<GameObject> activeChessman;
 
+	private Canvas CanvasObject ;
 
 	private Quaternion orientation = Quaternion.Euler(0,90,0);
 
 	public bool isWhiteTurn = true;
 
+	public GameObject ButtonPanels;
+	/*public Button QButton;
+	public Button RButton;
+	public Button BButton;
+	public Button KButton;*/
+
+	public GameObject EndGamePanel;
+
+	public Text winText;
+
 	private void Start(){
 
 		Instance = this;
 		SpawnAllChessmans ();
+		ButtonPanels = GameObject.Find("ButtonPanel");
+		EndGamePanel = GameObject.Find ("EndGamePanel");
+		EndGamePanel.SetActive (false);
+		ButtonPanels.SetActive(false);
+
+		winText.text = "";
+
+		/*
+		QButton = GetComponent<Button> ();
+		RButton = GetComponent<Button> ();
+		BButton = GetComponent<Button> ();
+		KButton = GetComponent<Button> ();*/
+
 	}
 
 
@@ -58,6 +82,8 @@ public class BoardManager : MonoBehaviour {
 
 
 	private void SelectChessman(int x, int y){
+
+
 
 		if(Chessmans[x,y] == null) //no piece
 			return;
@@ -115,19 +141,12 @@ public class BoardManager : MonoBehaviour {
 			}
 			EnPassantMove [0] = -1;
 			EnPassantMove [1] = -1;
-			if (selectedChessman.GetType () == typeof(Pawn)) {
 
-				if (y == 7) {
-					activeChessman.Remove (selectedChessman.gameObject);
-					Destroy (selectedChessman.gameObject);
-					SpawnChessman (1, x, y);
-					selectedChessman = Chessmans [x, y];
-				} else if (y == 0) {
-					activeChessman.Remove (selectedChessman.gameObject);
-					Destroy (selectedChessman.gameObject);
-					SpawnChessman (7, x, y);
-					selectedChessman = Chessmans [x, y];
-				}
+			if (selectedChessman.GetType () == typeof(Pawn)) {
+				
+				ChooseChessman (x, y);
+
+
 
 				if (selectedChessman.CurrentY == 1 && y == 3) {
 					EnPassantMove [0] = x;
@@ -147,6 +166,27 @@ public class BoardManager : MonoBehaviour {
 			
 		BoardHighlights.Instance.HideHighlights ();
 		selectedChessman = null;
+	}
+
+	private void ChooseChessman(int x, int y){
+		
+		if (y == 7) {
+			activeChessman.Remove (selectedChessman.gameObject);
+			Destroy (selectedChessman.gameObject);
+			SpawnChessman (1, x, y);
+			selectedChessman = Chessmans [x, y];
+			ButtonPanels.SetActive (true);
+
+
+		} else if (y == 0) {
+			activeChessman.Remove (selectedChessman.gameObject);
+			Destroy (selectedChessman.gameObject);
+			SpawnChessman (7, x, y);
+			selectedChessman = Chessmans [x, y];
+			ButtonPanels.SetActive (true);
+		}
+
+
 	}
 
 
@@ -182,7 +222,7 @@ public class BoardManager : MonoBehaviour {
 	}
 
 
-	private void SpawnAllChessmans(){
+	public void SpawnAllChessmans(){
 
 		activeChessman = new List<GameObject> ();
 		Chessmans = new Chessman[8, 8];
@@ -239,6 +279,9 @@ public class BoardManager : MonoBehaviour {
 	}
 
 
+		
+
+
 	private Vector3 GetTileCenter(int x, int y){
 
 		Vector3 origin = Vector3.zero;
@@ -281,16 +324,27 @@ public class BoardManager : MonoBehaviour {
 
 	private void EndGame(){
 
-		if (isWhiteTurn)
+
+		if (isWhiteTurn) {
 			Debug.Log ("White Team Wins!");
-		else
+			winText.text = "White Team Wins!";
+		} else {
 			Debug.Log ("Black Team Wins!");
+			winText.text = "Black Team Wins!";
+		}
 
 		foreach (GameObject go in activeChessman)
 			Destroy (go);
-
+		
+		EndGamePanel.SetActive (true);
 		isWhiteTurn = true;
 		BoardHighlights.Instance.HideHighlights();
 		SpawnAllChessmans();
 	}
-}
+
+
+
+	}
+
+
+
