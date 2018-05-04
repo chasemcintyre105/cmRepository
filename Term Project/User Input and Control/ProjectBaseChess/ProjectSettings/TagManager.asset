@@ -14,6 +14,15 @@ TagManager:
   - 1
   - -1
   - ChessPlane
+  - ButtonPanel
+  - QueenButton
+  - RookButton
+  - BishopButton
+  - KnightButton
+  - EndGamePanel
+  - whitewintext
+  - blackwintext
+  - chessplane
   layers:
   - Default
   - TransparentFX

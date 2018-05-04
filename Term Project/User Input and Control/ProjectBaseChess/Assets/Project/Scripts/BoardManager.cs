@@ -14,6 +14,8 @@ namespace Project
 
 		private Chessman selectedChessman;
 
+		public List<GameObject> highlights;
+
 		private const float TILE_SIZE = 1.0f;		//tile dimensions
 		private const float TILE_OFFSET = 0.5f;
 
@@ -28,7 +30,7 @@ namespace Project
 
 		public int[] EnPassantMove{ set; get; }
 
-		private Quaternion orientation = Quaternion.Euler (0, 90, 0);
+		private Quaternion orientation = Quaternion.Euler (90, 0, 0);//(0, 90, 0) is in Bina or tutorial
 
 		public bool isWhiteTurn = true;
 
@@ -78,7 +80,7 @@ namespace Project
 			previousMat = selectedChessman.GetComponent<MeshRenderer> ().material;//not in Bina's
 			selectedMat.mainTexture = previousMat.mainTexture;//not in Bina's
 			selectedChessman.GetComponent<MeshRenderer> ().material = selectedMat;//not in Bina's
-			BoardHighlights.Instance.HighlightAllowedMoves (allowedMoves); //PROBLEM LINE?
+			this.highlights = BoardHighlights.Instance.HighlightAllowedMoves (allowedMoves); //PROBLEM LINE?
 		}
 
 		private void MoveChessman (int x, int y) //responsible for moving a piece
@@ -140,7 +142,7 @@ namespace Project
 			}
 
 			selectedChessman.GetComponent<MeshRenderer> ().material = previousMat; //not in Bina's
-			BoardHighlights.Instance.HideHighlights ();
+			BoardHighlights.Instance.HideHighlights (highlights);
 			selectedChessman = null; //if move is not possible, unselect the piece
 		}
 
@@ -162,8 +164,8 @@ namespace Project
 
 		private void SpawnChessman (int index, int x, int y) // Spawns pieces
 		{
-			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;// This line is not in bina or tutor
-//			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), orientation) as GameObject;//This line is
+//			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;// This line is not in bina or tutor
+			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), orientation) as GameObject;//This line is
 			go.transform.SetParent (transform);
 			Chessmans [x, y] = go.GetComponent<Chessman> ();
 			Chessmans [x, y].SetPosition (x, y);
@@ -268,7 +270,7 @@ namespace Project
 				Destroy (go);
 
 			isWhiteTurn = true;
-			BoardHighlights.Instance.HideHighlights ();
+			BoardHighlights.Instance.HideHighlights (highlights);
 			SpawnAllChessmans ();
 		}
 	}

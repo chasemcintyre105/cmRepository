@@ -29,7 +29,7 @@ namespace Project
 			return go;
 		}
 
-		public void HighlightAllowedMoves (bool[,] moves) //Multi Dimensional array with booleans, will highlight allowed moves
+		public List<GameObject> HighlightAllowedMoves (bool[,] moves) //Multi Dimensional array with booleans, will highlight allowed moves
 		{
 			for (int i = 0; i < 8; i++) {
 				for (int j = 0; j < 8; j++) {
@@ -40,9 +40,10 @@ namespace Project
 					}
 				}
 			}
+			return highlights;
 		}
 
-		public void HideHighlights () //responsible for turning off highlights if not needed
+		public void HideHighlights (List<GameObject> highlights) //responsible for turning off highlights if not needed
 		{
 			foreach (GameObject go in highlights)
 				go.SetActive (false);
