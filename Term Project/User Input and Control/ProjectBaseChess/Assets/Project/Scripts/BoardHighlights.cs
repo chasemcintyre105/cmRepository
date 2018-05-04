@@ -14,7 +14,7 @@ namespace Project
 		private void Start ()
 		{
 			Instance = this;
-			highlights = new List <GameObject> ();
+			highlights = new List<GameObject> ();
 		}
 
 		private GameObject GetHighlightObject ()

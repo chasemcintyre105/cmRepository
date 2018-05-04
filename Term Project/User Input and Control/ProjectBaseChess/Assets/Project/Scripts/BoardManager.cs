@@ -21,7 +21,7 @@ namespace Project
 		private int selectionY = -1;
 
 		public List<GameObject> chessmanPrefabs;
-		private List<GameObject> activeChessman = new List<GameObject> ();
+		private List<GameObject> activeChessman;// = new List<GameObject> ();// new list not in Bina or tutorial
 
 		private Material previousMat;	//not in Bina's
 		public Material selectedMat;	//not in Bina's
@@ -153,7 +153,7 @@ namespace Project
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hit, 25.0f, LayerMask.GetMask ("ChessPlane"))) {
 				selectionX = (int)hit.point.x;
 				selectionY = (int)hit.point.z;
-				Debug.Log (Input.mousePosition);				
+				//Debug.Log (Input.mousePosition);				
 			} else {
 				selectionX = -1;
 				selectionY = -1;
@@ -162,7 +162,8 @@ namespace Project
 
 		private void SpawnChessman (int index, int x, int y) // Spawns pieces
 		{
-			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;
+			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;// This line is not in bina or tutor
+//			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), orientation) as GameObject;//This line is
 			go.transform.SetParent (transform);
 			Chessmans [x, y] = go.GetComponent<Chessman> ();
 			Chessmans [x, y].SetPosition (x, y);
