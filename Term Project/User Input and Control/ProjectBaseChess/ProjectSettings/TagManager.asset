@@ -14,6 +14,8 @@ TagManager:
   - 1
   - -1
   - ChessPlane
+  - ButtonPanel
+  - EndGamePanel
   layers:
   - Default
   - TransparentFX
