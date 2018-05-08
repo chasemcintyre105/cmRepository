@@ -253,18 +253,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 138350378}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1874378221}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &138350378
@@ -375,18 +364,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 255313675}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1874378221}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &255313675
@@ -556,18 +534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0e8297a9233a24995f821aa5b49126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedChessman: {fileID: 0}
-  selectionX: -1
-  selectionY: -1
-  <EnPassantMove>k__BackingField: 
-  chessmanPrefabs: []
-  activeChessman: []
-  CanvasObject: {fileID: 0}
-  orientation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
-  isWhiteTurn: 1
-  ButtonPanels: {fileID: 0}
-  EndGamePanel: {fileID: 0}
-  winText: {fileID: 0}
 --- !u!1001 &510948976
 Prefab:
   m_ObjectHideFlags: 0
@@ -800,6 +766,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4da2ff3532958545b8143d5c6009c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedChessman: {fileID: 0}
+  selectionX: -1
+  selectionY: -1
   chessmanPrefabs:
   - {fileID: 1031849599230294, guid: 3d3216ccce528ef4abf1bfca89e24f53, type: 2}
   - {fileID: 1189455942717334, guid: 3cac459dfc9d0574eacba4d9745d742b, type: 2}
@@ -815,6 +784,10 @@ MonoBehaviour:
   - {fileID: 1474449236938152, guid: b399ec6cb74b51f4fa5339fe49966cd9, type: 2}
   isWhiteTurn: 1
   ButtonPanels: {fileID: 0}
+  QueenButton: {fileID: 1316696721}
+  RookButton: {fileID: 1095513391}
+  BishopButton: {fileID: 255313674}
+  KnightButton: {fileID: 138350377}
   EndGamePanel: {fileID: 0}
   winText: {fileID: 910696250}
 --- !u!4 &984692374
@@ -994,18 +967,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1095513392}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1874378221}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1095513392
@@ -1200,18 +1162,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1316696722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1874378221}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: QueenButton
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1316696722
@@ -1622,6 +1573,7 @@ GameObject:
   - component: {fileID: 1874378222}
   - component: {fileID: 1874378224}
   - component: {fileID: 1874378223}
+  - component: {fileID: 1874378225}
   m_Layer: 5
   m_Name: ButtonPanel
   m_TagString: ButtonPanel
@@ -1684,6 +1636,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1874378221}
+--- !u!114 &1874378225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1874378221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc2e37d7b4bd824ba1c5b4699167859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1921668472
 GameObject:
   m_ObjectHideFlags: 0

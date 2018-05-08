@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class BoardManager : MonoBehaviour {
 
@@ -9,13 +10,14 @@ public class BoardManager : MonoBehaviour {
 	private bool[,] allowedMoves{ set; get;}
 
 	public Chessman [,] Chessmans{ set; get;}
-	private Chessman selectedChessman; 
+	public Chessman selectedChessman; 
 
 	private const float tile_size = 1.0f;
 	private const float tile_offset = 0.5f;
 
-	private int selectionX = -1;
-	private int selectionY = -1;
+	public int selectionX = -1;
+	public int selectionY = -1;
+
 
 	public int[] EnPassantMove{ set; get;}
 
@@ -29,10 +31,10 @@ public class BoardManager : MonoBehaviour {
 	public bool isWhiteTurn = true;
 
 	public GameObject ButtonPanels;
-	/*public Button QButton;
-	public Button RButton;
-	public Button BButton;
-	public Button KButton;*/
+	public Button QueenButton;
+	public Button RookButton;
+	public Button BishopButton;
+	public Button KnightButton;
 
 	public GameObject EndGamePanel;
 
@@ -48,12 +50,9 @@ public class BoardManager : MonoBehaviour {
 		ButtonPanels.SetActive(false);
 
 		winText.text = "";
+	
 
-		/*
-		QButton = GetComponent<Button> ();
-		RButton = GetComponent<Button> ();
-		BButton = GetComponent<Button> ();
-		KButton = GetComponent<Button> ();*/
+
 
 	}
 
@@ -78,7 +77,11 @@ public class BoardManager : MonoBehaviour {
 				}
 			}
 		}
+
+
 	}
+
+
 
 
 	private void SelectChessman(int x, int y){
@@ -109,6 +112,7 @@ public class BoardManager : MonoBehaviour {
 
 
 	private void MoveChessman(int x, int y){
+		
 
 		if (allowedMoves[x,y]) {
 
@@ -144,8 +148,42 @@ public class BoardManager : MonoBehaviour {
 
 			if (selectedChessman.GetType () == typeof(Pawn)) {
 				
-				ChooseChessman (x, y);
+			
+				if (y == 7) {
+					activeChessman.Remove (selectedChessman.gameObject);
+					Destroy (selectedChessman.gameObject);
+					ButtonPanels.SetActive (true);
 
+					Button QWbtn = QueenButton.GetComponent<Button> ();
+					QWbtn.onClick.AddListener(delegate{pawntoQueenWhite(x, y);});
+					Button RWbtn = RookButton.GetComponent<Button> ();
+					RWbtn.onClick.AddListener(delegate{pawntoRookWhite(x, y);});
+					Button BWbtn = BishopButton.GetComponent<Button> ();
+					BWbtn.onClick.AddListener(delegate{pawntoBishopWhite(x, y);});
+					Button KWbtn = KnightButton.GetComponent<Button> ();
+					KWbtn.onClick.AddListener(delegate{pawntoKnightWhite(x, y);});
+
+					selectedChessman = Chessmans [x, y];
+
+
+
+				} else if (y == 0) {
+					activeChessman.Remove (selectedChessman.gameObject);
+					Destroy (selectedChessman.gameObject);
+					ButtonPanels.SetActive (true);
+
+					Button QBbtn = QueenButton.GetComponent<Button> ();
+					QBbtn.onClick.AddListener(delegate{pawntoQueenBlack(x, y);});
+					Button RBbtn = RookButton.GetComponent<Button> ();
+					RBbtn.onClick.AddListener(delegate{pawntoRookBlack(x, y);});
+					Button BBbtn = BishopButton.GetComponent<Button> ();
+					BBbtn.onClick.AddListener(delegate{pawntoBishopBlack(x, y);});
+					Button KBbtn = KnightButton.GetComponent<Button> ();
+					KBbtn.onClick.AddListener(delegate{pawntoKnightBlack(x, y);});
+
+					selectedChessman = Chessmans [x, y];
+				
+				}
 
 
 				if (selectedChessman.CurrentY == 1 && y == 3) {
@@ -168,26 +206,6 @@ public class BoardManager : MonoBehaviour {
 		selectedChessman = null;
 	}
 
-	private void ChooseChessman(int x, int y){
-		
-		if (y == 7) {
-			activeChessman.Remove (selectedChessman.gameObject);
-			Destroy (selectedChessman.gameObject);
-			SpawnChessman (1, x, y);
-			selectedChessman = Chessmans [x, y];
-			ButtonPanels.SetActive (true);
-
-
-		} else if (y == 0) {
-			activeChessman.Remove (selectedChessman.gameObject);
-			Destroy (selectedChessman.gameObject);
-			SpawnChessman (7, x, y);
-			selectedChessman = Chessmans [x, y];
-			ButtonPanels.SetActive (true);
-		}
-
-
-	}
 
 
 	private void UpdateSelection(){
@@ -211,7 +229,7 @@ public class BoardManager : MonoBehaviour {
 	}
 
 
-	private void SpawnChessman(int index, int x, int y){
+	public void SpawnChessman(int index, int x, int y){
 
 		GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter(x,y), orientation) as GameObject;
 		go.transform.SetParent (transform);
@@ -322,6 +340,61 @@ public class BoardManager : MonoBehaviour {
 		}
 	}
 
+
+	//White
+	void pawntoQueenWhite(int x, int y){
+
+		Debug.Log ("Queen button is clicked");
+		SpawnChessman (1, x, y);
+		ButtonPanels.SetActive (false);
+	}
+	void pawntoRookWhite(int x, int y){
+
+		Debug.Log ("Rook button is clicked");
+		SpawnChessman (2, x, y);
+		ButtonPanels.SetActive (false);
+	}
+	void pawntoBishopWhite(int x, int y){
+
+		Debug.Log ("Bishop button is clicked");
+		SpawnChessman (3, x, y);
+		ButtonPanels.SetActive (false);
+	}
+	void pawntoKnightWhite(int x, int y){
+
+		Debug.Log ("Knight button is clicked");
+		SpawnChessman (4, x, y);
+		ButtonPanels.SetActive (false);
+	}
+
+	//Black
+	void pawntoQueenBlack(int x, int y){
+
+		Debug.Log ("Queen button is clicked");
+		SpawnChessman (7, x, y);
+		ButtonPanels.SetActive (false);
+	}
+	void pawntoRookBlack(int x, int y){
+
+		Debug.Log ("Rook button is clicked");
+		SpawnChessman (8, x, y);
+		ButtonPanels.SetActive (false);
+	}
+	void pawntoBishopBlack(int x, int y){
+
+		Debug.Log ("Bishop button is clicked");
+		SpawnChessman (9, x, y);
+		ButtonPanels.SetActive (false);
+	}
+	void pawntoKnightBlack(int x, int y){
+
+		Debug.Log ("Knight button is clicked");
+		SpawnChessman (10, x, y);
+		ButtonPanels.SetActive (false);
+	}
+
+
+
 	private void EndGame(){
 
 
@@ -333,13 +406,18 @@ public class BoardManager : MonoBehaviour {
 			winText.text = "Black Team Wins!";
 		}
 
-		foreach (GameObject go in activeChessman)
-			Destroy (go);
 		
 		EndGamePanel.SetActive (true);
+
+		foreach (GameObject go in activeChessman)
+			Destroy (go);
+
 		isWhiteTurn = true;
 		BoardHighlights.Instance.HideHighlights();
 		SpawnAllChessmans();
+
+
+
 	}
 
 
