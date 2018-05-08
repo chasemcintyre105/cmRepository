@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace Project
 {
@@ -34,10 +36,26 @@ namespace Project
 
 		public bool isWhiteTurn = true;
 
+		public GameObject ButtonPanels;
+		public Button QueenButton;
+		public Button RookButton;
+		public Button BishopButton;
+		public Button KnightButton;
+
+		public GameObject EndGamePanel;
+
+		public Text winText;	
+
 		private void Start ()
 		{
 			Instance = this;
 			SpawnAllChessmans ();
+			ButtonPanels = GameObject.Find("ButtonPanel");
+			EndGamePanel = GameObject.Find ("EndGamePanel");
+			EndGamePanel.SetActive (false);
+			ButtonPanels.SetActive(false);
+
+			winText.text = "";
 		}
 
 		private void Update ()
@@ -76,11 +94,13 @@ namespace Project
 			if (!hasAtleastOneMove)
 				return;
 		
-			selectedChessman = Chessmans [x, y]; 			//selectedChessman.transform.position = new Vector3 (selectedChessman.CurrentX, selectedChessman.transform.position.y + 0.25f, selectedChessman.CurrentY);
+			selectedChessman = Chessmans [x, y]; 			
+			//selectedChessman.transform.position = new Vector3 (selectedChessman.CurrentX, selectedChessman.transform.position.y + 0.25f, selectedChessman.CurrentY);
 			previousMat = selectedChessman.GetComponent<MeshRenderer> ().material;//not in Bina's
 			selectedMat.mainTexture = previousMat.mainTexture;//not in Bina's
 			selectedChessman.GetComponent<MeshRenderer> ().material = selectedMat;//not in Bina's
 			this.highlights = BoardHighlights.Instance.HighlightAllowedMoves (allowedMoves); //PROBLEM LINE?
+			// BoardHighlights.Instance.HighlightAllowedMoves (allowedMoves); //from Bina
 		}
 
 		private void MoveChessman (int x, int y) //responsible for moving a piece
@@ -100,11 +120,12 @@ namespace Project
 					activeChessman.Remove (c.gameObject); //Destroy the piece if captured
 					Destroy (c.gameObject);
 				}
-
 				if (x == EnPassantMove [0] && y == EnPassantMove [1]) {
-					if (isWhiteTurn)	//white turn
+					if (isWhiteTurn)	
+					//white turn
 						c = Chessmans [x, y - 1];
-					else	//black turn
+					else	
+					//black turn
 						c = Chessmans [x, y + 1];
 
 					activeChessman.Remove (c.gameObject);
@@ -116,12 +137,33 @@ namespace Project
 					if (y == 7) {
 						activeChessman.Remove (selectedChessman.gameObject);
 						Destroy (selectedChessman.gameObject);
-						SpawnChessman (1, x, y);
+						ButtonPanels.SetActive (true);
+						Button QWbtn = QueenButton.GetComponent<Button> ();
+						QWbtn.onClick.AddListener(delegate{pawntoQueenWhite(x, y);});
+						Button RWbtn = RookButton.GetComponent<Button> ();
+						RWbtn.onClick.AddListener(delegate{pawntoRookWhite(x, y);});
+						Button BWbtn = BishopButton.GetComponent<Button> ();
+						BWbtn.onClick.AddListener(delegate{pawntoBishopWhite(x, y);});
+						Button KWbtn = KnightButton.GetComponent<Button> ();
+						KWbtn.onClick.AddListener(delegate{pawntoKnightWhite(x, y);});
+
+						SpawnChessman (1, x, y);//No longer in Bina's
 						selectedChessman = Chessmans [x, y];
+
 					} else if (y == 0) {
 						activeChessman.Remove (selectedChessman.gameObject);
 						Destroy (selectedChessman.gameObject);
-						SpawnChessman (7, x, y);
+						ButtonPanels.SetActive (true);
+						Button QBbtn = QueenButton.GetComponent<Button> ();
+						QBbtn.onClick.AddListener(delegate{pawntoQueenBlack(x, y);});
+						Button RBbtn = RookButton.GetComponent<Button> ();
+						RBbtn.onClick.AddListener(delegate{pawntoRookBlack(x, y);});
+						Button BBbtn = BishopButton.GetComponent<Button> ();
+						BBbtn.onClick.AddListener(delegate{pawntoBishopBlack(x, y);});
+						Button KBbtn = KnightButton.GetComponent<Button> ();
+						KBbtn.onClick.AddListener(delegate{pawntoKnightBlack(x, y);});						
+
+						SpawnChessman (7, x, y);//No longer in Bina's
 						selectedChessman = Chessmans [x, y];
 					}
 
@@ -179,9 +221,11 @@ namespace Project
 			EnPassantMove = new int[2]{ -1, -1 }; 
 			//spawn the white team
 
-			SpawnChessman (0, 3, 0); //Spawns White King
+ 			//Spawns White King
+			SpawnChessman (0, 3, 0);
 			
-			SpawnChessman (1, 4, 0); //Spawns White Queen
+			 //Spawns White Queen
+			SpawnChessman (1, 4, 0);
 
 			 //Spawns White Rooks 
 			SpawnChessman (2, 0, 0);
@@ -258,14 +302,71 @@ namespace Project
 			}
 		}
 
+		//White
+		void pawntoQueenWhite(int x, int y){
+
+			Debug.Log ("Queen button is clicked");
+			SpawnChessman (1, x, y);
+			ButtonPanels.SetActive (false);
+		}
+		void pawntoRookWhite(int x, int y){
+
+			Debug.Log ("Rook button is clicked");
+			SpawnChessman (2, x, y);
+			ButtonPanels.SetActive (false);
+		}
+		void pawntoBishopWhite(int x, int y){
+
+			Debug.Log ("Bishop button is clicked");
+			SpawnChessman (3, x, y);
+			ButtonPanels.SetActive (false);
+		}
+		void pawntoKnightWhite(int x, int y){
+
+			Debug.Log ("Knight button is clicked");
+			SpawnChessman (4, x, y);
+			ButtonPanels.SetActive (false);
+		}
+
+		//Black
+		void pawntoQueenBlack(int x, int y){
+
+			Debug.Log ("Queen button is clicked");
+			SpawnChessman (7, x, y);
+			ButtonPanels.SetActive (false);
+		}
+		void pawntoRookBlack(int x, int y){
+
+			Debug.Log ("Rook button is clicked");
+			SpawnChessman (8, x, y);
+			ButtonPanels.SetActive (false);
+		}
+		void pawntoBishopBlack(int x, int y){
+
+			Debug.Log ("Bishop button is clicked");
+			SpawnChessman (9, x, y);
+			ButtonPanels.SetActive (false);
+		}
+		void pawntoKnightBlack(int x, int y){
+
+			Debug.Log ("Knight button is clicked");
+			SpawnChessman (10, x, y);
+			ButtonPanels.SetActive (false);
+		}
+
 		private void EndGame ()
 		{
 
-			if (isWhiteTurn)
+			if (isWhiteTurn){
 				Debug.Log ("White Team Wins!");
-			else
+				winText.text = "White Team Wins!";				
+			}else{
 				Debug.Log ("Black Team Wins!");
-
+				winText.text = "Black Team Wins!";				
+			}
+			
+			EndGamePanel.SetActive (true);
+						
 			foreach (GameObject go in activeChessman)
 				Destroy (go);
 
