@@ -32,8 +32,8 @@ namespace Project
 
 		public int[] EnPassantMove{ set; get; }
 
-		private Quaternion orientation = Quaternion.Euler (90, 0, 0);//(0, 90, 0) is in Bina or tutorial
-
+//		private Quaternion orientation = Quaternion.Euler (90, 0, 0);//(0, 90, 0) is in Bina or tutorial
+		private Quaternion orientation = Quaternion.Euler (0, 90, 0);//Bina's Board
 		public bool isWhiteTurn = true;
 
 		public GameObject ButtonPanels;
