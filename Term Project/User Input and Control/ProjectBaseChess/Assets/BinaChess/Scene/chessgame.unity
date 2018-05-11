@@ -286,7 +286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 290, y: 100}
+  m_AnchoredPosition: {x: 300, y: 100}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88646400
@@ -599,7 +599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 290, y: 20}
+  m_AnchoredPosition: {x: 300, y: 20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529016600
@@ -691,6 +691,7 @@ GameObject:
   - component: {fileID: 984692374}
   - component: {fileID: 984692373}
   - component: {fileID: 984692375}
+  - component: {fileID: 984692376}
   m_Layer: 0
   m_Name: ChessBoard
   m_TagString: Untagged
@@ -723,13 +724,20 @@ MonoBehaviour:
   - {fileID: 1038715794840050, guid: fb1ecbd9eac85774a85dea0ee5451277, type: 2}
   - {fileID: 1474449236938152, guid: b399ec6cb74b51f4fa5339fe49966cd9, type: 2}
   isWhiteTurn: 1
-  ButtonPanels: {fileID: 1802126878}
+  ButtonPanel: {fileID: 0}
   QueenButton: {fileID: 88646400}
   RookButton: {fileID: 1548483881}
   BishopButton: {fileID: 529016600}
   KnightButton: {fileID: 1259151091}
   EndGamePanel: {fileID: 0}
   winText: {fileID: 164667677}
+  clips:
+  - {fileID: 8300000, guid: 7464a710aa093834a89099453e16d8a3, type: 3}
+  - {fileID: 8300000, guid: 6b9204e3c44ab3c4f86cd018b6682d86, type: 3}
+  - {fileID: 8300000, guid: e1841adce6d6228459dd3c5d6d95a8cf, type: 3}
+  - {fileID: 8300000, guid: 65208d2cb0d9e78419b8711a26cd44e6, type: 3}
+  - {fileID: 8300000, guid: b56eb2fe92b99424db6e3c6cf89ef9cb, type: 3}
+  - {fileID: 8300000, guid: 286c069382f2e1b49a8b6e9cf2360dde, type: 3}
 --- !u!4 &984692374
 Transform:
   m_ObjectHideFlags: 0
@@ -758,6 +766,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightPrefab: {fileID: 1394182303016312, guid: c264e32c20468e54a815fc078e3a100b,
     type: 2}
+--- !u!82 &984692376
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 984692372}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1116810528
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,7 +1086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 290, y: -20}
+  m_AnchoredPosition: {x: 300, y: -20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1259151091
@@ -1391,7 +1479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 290, y: 60}
+  m_AnchoredPosition: {x: 300, y: 60}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548483881
