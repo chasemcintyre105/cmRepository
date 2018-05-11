@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace Project
 {
@@ -14,6 +16,8 @@ namespace Project
 
 		private Chessman selectedChessman;
 
+		public List<GameObject> highlights;
+
 		private const float TILE_SIZE = 1.0f;		//tile dimensions
 		private const float TILE_OFFSET = 0.5f;
 
@@ -21,21 +25,37 @@ namespace Project
 		private int selectionY = -1;
 
 		public List<GameObject> chessmanPrefabs;
-		private List<GameObject> activeChessman = new List<GameObject> ();
+		private List<GameObject> activeChessman;// = new List<GameObject> ();// new list not in Bina or tutorial
 
 		private Material previousMat;	//not in Bina's
 		public Material selectedMat;	//not in Bina's
 
 		public int[] EnPassantMove{ set; get; }
 
-		private Quaternion orientation = Quaternion.Euler (0, 90, 0);
-
+//		private Quaternion orientation = Quaternion.Euler (90, 0, 0);//(0, 90, 0) is in Bina or tutorial
+		private Quaternion orientation = Quaternion.Euler (0, 90, 0);//Bina's Board
 		public bool isWhiteTurn = true;
+
+		public GameObject ButtonPanel;
+		public Button QueenButton;
+		public Button RookButton;
+		public Button BishopButton;
+		public Button KnightButton;
+
+		public GameObject EndGamePanel;
+
+		public Text winText;	
 
 		private void Start ()
 		{
 			Instance = this;
 			SpawnAllChessmans ();
+			ButtonPanel = GameObject.Find("ButtonPanel");
+			EndGamePanel = GameObject.Find ("EndGamePanel");
+			EndGamePanel.SetActive (false);
+			ButtonPanel.SetActive(false);
+
+			winText.text = "";
 		}
 
 		private void Update ()
@@ -74,11 +94,13 @@ namespace Project
 			if (!hasAtleastOneMove)
 				return;
 		
-			selectedChessman = Chessmans [x, y]; 			//selectedChessman.transform.position = new Vector3 (selectedChessman.CurrentX, selectedChessman.transform.position.y + 0.25f, selectedChessman.CurrentY);
+			selectedChessman = Chessmans [x, y]; 			
+			//selectedChessman.transform.position = new Vector3 (selectedChessman.CurrentX, selectedChessman.transform.position.y + 0.25f, selectedChessman.CurrentY);
 			previousMat = selectedChessman.GetComponent<MeshRenderer> ().material;//not in Bina's
 			selectedMat.mainTexture = previousMat.mainTexture;//not in Bina's
 			selectedChessman.GetComponent<MeshRenderer> ().material = selectedMat;//not in Bina's
-			BoardHighlights.Instance.HighlightAllowedMoves (allowedMoves); //PROBLEM LINE?
+			this.highlights = BoardHighlights.Instance.HighlightAllowedMoves (allowedMoves); //PROBLEM LINE?
+			// BoardHighlights.Instance.HighlightAllowedMoves (allowedMoves); //from Bina
 		}
 
 		private void MoveChessman (int x, int y) //responsible for moving a piece
@@ -98,11 +120,12 @@ namespace Project
 					activeChessman.Remove (c.gameObject); //Destroy the piece if captured
 					Destroy (c.gameObject);
 				}
-
 				if (x == EnPassantMove [0] && y == EnPassantMove [1]) {
-					if (isWhiteTurn)	//white turn
+					if (isWhiteTurn)	
+					//white turn
 						c = Chessmans [x, y - 1];
-					else	//black turn
+					else	
+					//black turn
 						c = Chessmans [x, y + 1];
 
 					activeChessman.Remove (c.gameObject);
@@ -114,12 +137,33 @@ namespace Project
 					if (y == 7) {
 						activeChessman.Remove (selectedChessman.gameObject);
 						Destroy (selectedChessman.gameObject);
-						SpawnChessman (1, x, y);
+						ButtonPanel.SetActive (true);
+						Button QWbtn = QueenButton.GetComponent<Button> ();
+						QWbtn.onClick.AddListener(delegate{pawntoQueenWhite(x, y);});
+						Button RWbtn = RookButton.GetComponent<Button> ();
+						RWbtn.onClick.AddListener(delegate{pawntoRookWhite(x, y);});
+						Button BWbtn = BishopButton.GetComponent<Button> ();
+						BWbtn.onClick.AddListener(delegate{pawntoBishopWhite(x, y);});
+						Button KWbtn = KnightButton.GetComponent<Button> ();
+						KWbtn.onClick.AddListener(delegate{pawntoKnightWhite(x, y);});
+
+						SpawnChessman (1, x, y);//No longer in Bina's
 						selectedChessman = Chessmans [x, y];
+
 					} else if (y == 0) {
 						activeChessman.Remove (selectedChessman.gameObject);
 						Destroy (selectedChessman.gameObject);
-						SpawnChessman (7, x, y);
+						ButtonPanel.SetActive (true);
+						Button QBbtn = QueenButton.GetComponent<Button> ();
+						QBbtn.onClick.AddListener(delegate{pawntoQueenBlack(x, y);});
+						Button RBbtn = RookButton.GetComponent<Button> ();
+						RBbtn.onClick.AddListener(delegate{pawntoRookBlack(x, y);});
+						Button BBbtn = BishopButton.GetComponent<Button> ();
+						BBbtn.onClick.AddListener(delegate{pawntoBishopBlack(x, y);});
+						Button KBbtn = KnightButton.GetComponent<Button> ();
+						KBbtn.onClick.AddListener(delegate{pawntoKnightBlack(x, y);});						
+
+						SpawnChessman (7, x, y);//No longer in Bina's
 						selectedChessman = Chessmans [x, y];
 					}
 
@@ -140,7 +184,7 @@ namespace Project
 			}
 
 			selectedChessman.GetComponent<MeshRenderer> ().material = previousMat; //not in Bina's
-			BoardHighlights.Instance.HideHighlights ();
+			BoardHighlights.Instance.HideHighlights (highlights);
 			selectedChessman = null; //if move is not possible, unselect the piece
 		}
 
@@ -153,7 +197,7 @@ namespace Project
 			if (Physics.Raycast (Camera.main.ScreenPointToRay (Input.mousePosition), out hit, 25.0f, LayerMask.GetMask ("ChessPlane"))) {
 				selectionX = (int)hit.point.x;
 				selectionY = (int)hit.point.z;
-				Debug.Log (Input.mousePosition);				
+				//Debug.Log (Input.mousePosition);				
 			} else {
 				selectionX = -1;
 				selectionY = -1;
@@ -162,7 +206,8 @@ namespace Project
 
 		private void SpawnChessman (int index, int x, int y) // Spawns pieces
 		{
-			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;
+//			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;// This line is not in bina or tutor
+			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), orientation) as GameObject;//This line is
 			go.transform.SetParent (transform);
 			Chessmans [x, y] = go.GetComponent<Chessman> ();
 			Chessmans [x, y].SetPosition (x, y);
@@ -176,9 +221,11 @@ namespace Project
 			EnPassantMove = new int[2]{ -1, -1 }; 
 			//spawn the white team
 
-			SpawnChessman (0, 3, 0); //Spawns White King
+ 			//Spawns White King
+			SpawnChessman (0, 3, 0);
 			
-			SpawnChessman (1, 4, 0); //Spawns White Queen
+			 //Spawns White Queen
+			SpawnChessman (1, 4, 0);
 
 			 //Spawns White Rooks 
 			SpawnChessman (2, 0, 0);
@@ -255,19 +302,76 @@ namespace Project
 			}
 		}
 
+		//White
+		void pawntoQueenWhite(int x, int y){
+
+			Debug.Log ("Queen button is clicked");
+			SpawnChessman (1, x, y);
+			ButtonPanel.SetActive (false);
+		}
+		void pawntoRookWhite(int x, int y){
+
+			Debug.Log ("Rook button is clicked");
+			SpawnChessman (2, x, y);
+			ButtonPanel.SetActive (false);
+		}
+		void pawntoBishopWhite(int x, int y){
+
+			Debug.Log ("Bishop button is clicked");
+			SpawnChessman (3, x, y);
+			ButtonPanel.SetActive (false);
+		}
+		void pawntoKnightWhite(int x, int y){
+
+			Debug.Log ("Knight button is clicked");
+			SpawnChessman (4, x, y);
+			ButtonPanel.SetActive (false);
+		}
+
+		//Black
+		void pawntoQueenBlack(int x, int y){
+
+			Debug.Log ("Queen button is clicked");
+			SpawnChessman (7, x, y);
+			ButtonPanel.SetActive (false);
+		}
+		void pawntoRookBlack(int x, int y){
+
+			Debug.Log ("Rook button is clicked");
+			SpawnChessman (8, x, y);
+			ButtonPanel.SetActive (false);
+		}
+		void pawntoBishopBlack(int x, int y){
+
+			Debug.Log ("Bishop button is clicked");
+			SpawnChessman (9, x, y);
+			ButtonPanel.SetActive (false);
+		}
+		void pawntoKnightBlack(int x, int y){
+
+			Debug.Log ("Knight button is clicked");
+			SpawnChessman (10, x, y);
+			ButtonPanel.SetActive (false);
+		}
+
 		private void EndGame ()
 		{
 
-			if (isWhiteTurn)
+			if (isWhiteTurn){
 				Debug.Log ("White Team Wins!");
-			else
+				winText.text = "White Team Wins!";				
+			}else{
 				Debug.Log ("Black Team Wins!");
-
+				winText.text = "Black Team Wins!";				
+			}
+			
+			EndGamePanel.SetActive (true);
+						
 			foreach (GameObject go in activeChessman)
 				Destroy (go);
 
 			isWhiteTurn = true;
-			BoardHighlights.Instance.HideHighlights ();
+			BoardHighlights.Instance.HideHighlights (highlights);
 			SpawnAllChessmans ();
 		}
 	}
