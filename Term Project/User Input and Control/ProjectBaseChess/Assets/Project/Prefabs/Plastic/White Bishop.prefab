@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4094879572671638}
   - component: {fileID: 33023658339663354}
   - component: {fileID: 23358229710364704}
-  - component: {fileID: 114745458526204924}
+  - component: {fileID: 114517211058046786}
   m_Layer: 0
   m_Name: White Bishop
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1177101242561532}
   m_Mesh: {fileID: 4300000, guid: 8e406e8a50248f5499b007168c8d1ce1, type: 3}
---- !u!114 &114745458526204924
+--- !u!114 &114517211058046786
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177101242561532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 392db685802d5ad45acef5e96add95db, type: 3}
+  m_Script: {fileID: 11500000, guid: 72e39240dd20f7448acf7d3e5fbcb249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isWhite: 1

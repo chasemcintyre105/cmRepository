@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4849886331091218}
   - component: {fileID: 33867162045188992}
   - component: {fileID: 23920722247910786}
-  - component: {fileID: 114874000213231184}
+  - component: {fileID: 114862434086144492}
   m_Layer: 0
   m_Name: Black Bishop
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1532330647187194}
   m_Mesh: {fileID: 4300020, guid: af55134f262bc084dbc22b77b29e3582, type: 3}
---- !u!114 &114874000213231184
+--- !u!114 &114862434086144492
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1532330647187194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 392db685802d5ad45acef5e96add95db, type: 3}
+  m_Script: {fileID: 11500000, guid: 72e39240dd20f7448acf7d3e5fbcb249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isWhite: 0

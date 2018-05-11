@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4338724902656962}
   - component: {fileID: 33156963067165656}
   - component: {fileID: 23042506082505522}
-  - component: {fileID: 114512207253411050}
+  - component: {fileID: 114765484568760892}
   m_Layer: 0
   m_Name: White Knight
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873205831917510}
   m_Mesh: {fileID: 4300000, guid: 37fa4b41bc7842542bb795f93ea1073b, type: 3}
---- !u!114 &114512207253411050
+--- !u!114 &114765484568760892
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1873205831917510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24310be240e35df4cb7723a9d124e056, type: 3}
+  m_Script: {fileID: 11500000, guid: a00522ecb5adffe4eaf98c3842938f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isWhite: 1

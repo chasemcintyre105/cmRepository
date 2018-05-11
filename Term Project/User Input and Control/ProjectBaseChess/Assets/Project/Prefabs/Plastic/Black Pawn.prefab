@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4431202045520620}
   - component: {fileID: 33971790677586532}
   - component: {fileID: 23343357766478144}
-  - component: {fileID: 114956565504698742}
+  - component: {fileID: 114558806234055478}
   m_Layer: 0
   m_Name: Black Pawn
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863083837753424}
   m_Mesh: {fileID: 4300002, guid: bcf49bd9de661ed44aab6cde0c2faba9, type: 3}
---- !u!114 &114956565504698742
+--- !u!114 &114558806234055478
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1863083837753424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0156acbeb134dde43934b5df29b74bdb, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e4a65b24ea953b489acd3e29b67d620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isWhite: 0

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4038572837212652}
   - component: {fileID: 33112428344713168}
   - component: {fileID: 23027692051721740}
-  - component: {fileID: 114668120138916210}
+  - component: {fileID: 114067863957745248}
   m_Layer: 0
   m_Name: White King
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1211110205303578}
   m_Mesh: {fileID: 4300002, guid: 00af43d1e910b684286d43c9ca3daf2e, type: 3}
---- !u!114 &114668120138916210
+--- !u!114 &114067863957745248
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1211110205303578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c2c8c92ca53bbc4492ef6de592be879, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a5d0814149c22e449b2408c4445b13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isWhite: 1

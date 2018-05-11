@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 931
-  m_MinSize: {x: 681, y: 342}
-  m_MaxSize: {x: 12006, y: 8042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 98
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,8 +64,8 @@ MonoBehaviour:
     y: 0
     width: 386
     height: 931
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -114,14 +114,14 @@ MonoBehaviour:
     y: 563
     width: 1518
     height: 368
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
     y: 0
     width: 1904
     height: 981
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -206,10 +206,10 @@ MonoBehaviour:
     y: 0
     width: 1518
     height: 931
-  m_MinSize: {x: 404, y: 342}
-  m_MaxSize: {x: 8004, y: 8042}
+  m_MinSize: {x: 404, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 99
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 100
+  controlID: 11
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -327,19 +327,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/BinaChess/script
+    - Assets/Project/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/BinaChess/script
+  - Assets/Project/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\pjban\Documents\Unity Projects\ProjectBaseChess
+  m_LastProjectPath: C:\Users\Public\Documents\Unity Projects\ProjectBaseChess
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ee300000
-    m_LastClickedID: 12526
-    m_ExpandedIDs: 000000000c2c0000622c0000f42c0000082d0000202d0000662d00005e2f0000d42f000048310000743100006c320000ae3200000a3300006e3300002e340000d6350000e0350000e63500000a3600005e38000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 378}
+    m_SelectedIDs: b6360000
+    m_LastClickedID: 14006
+    m_ExpandedIDs: 00000000d42a0000d82a00002a2b00003a2c00003c2e0000b02e0000b42e0000f22e0000282f0000742f0000443100005a310000a23100000232000054320000d8340000ea340000fc340000083500000e350000a636000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c2c0000622c0000f42c0000082d0000202d0000662d00005e2f0000d42f0000d62f00004831000074310000563200006c320000ae3200000a3300006e3300002e340000d6350000e0350000e63500000a3600002e3700005e380000
+    m_ExpandedIDs: 00000000d42a0000d82a00002a2b00003a2c0000242e00003c2e0000b02e0000b42e0000282f0000742f0000443100005a310000a23100000232000054320000d8340000ea340000fc340000083500000e35000034360000a6360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -392,8 +392,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c0550000
-    m_LastClickedInstanceID: 21952
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 72060000
     m_RenameOverlay:
@@ -485,9 +485,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5856feff
-    m_LastClickedID: -108968
-    m_ExpandedIDs: 5a56feff9a5bfeffd65ffefff47efeff3a87feffe289feff4c90feff889dfeffb4acfeffd8d6feff6ee3feff9822ffff9246ffff306effff1483ffffb097ffff80f4fffffef8ffff00000000de3a00002a3b000080420000124700002047000088470000de470000ec4700004a48000054480000644b00009a4b0000a44b000036500000ae550000c05500000c560000
+    m_SelectedIDs: 3e460000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 1c84fbff44defbff24e6fbff980dfcffa80dfcffe40dfcffa034fcff8290fcffb090fcff309afcff5abffcff64bffcff8cbffcff48c4fcff7ac4fcffe4c7fcffdec9fcfffacdfcff3acefcff44cefcff0ad1fcffd810fdff9ad0fdfff2f1ffff90fbffff00000000e23900002e3a0000383a00004e50000052500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,10 +503,10 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - chessgameEdited
+  - Scene2
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -573,9 +573,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 54.925236
+    m_Target: 2154.1226
     speed: 2
-    m_Value: 54.925236
+    m_Value: 2154.1226
   m_Ortho:
     m_Target: 0
     speed: 2
