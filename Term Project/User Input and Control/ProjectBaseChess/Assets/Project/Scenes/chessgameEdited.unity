@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -253,7 +253,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 138350378}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1874378221}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &138350378
@@ -364,7 +375,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 255313675}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1874378221}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &255313675
@@ -414,7 +436,7 @@ GameObject:
   - component: {fileID: 265204114}
   m_Layer: 5
   m_Name: RestartButton
-  m_TagString: Untagged
+  m_TagString: RestartButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,7 +553,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 265204109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0e8297a9233a24995f821aa5b49126, type: 3}
+  m_Script: {fileID: 11500000, guid: 36bcf3e35b05afc47b67d550c3edcbb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &510948976
@@ -748,6 +770,7 @@ GameObject:
   - component: {fileID: 984692374}
   - component: {fileID: 984692373}
   - component: {fileID: 984692375}
+  - component: {fileID: 984692376}
   m_Layer: 0
   m_Name: ChessBoard
   m_TagString: Untagged
@@ -761,14 +784,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 984692372}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4da2ff3532958545b8143d5c6009c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedChessman: {fileID: 0}
-  selectionX: -1
-  selectionY: -1
   chessmanPrefabs:
   - {fileID: 1031849599230294, guid: 3d3216ccce528ef4abf1bfca89e24f53, type: 2}
   - {fileID: 1189455942717334, guid: 3cac459dfc9d0574eacba4d9745d742b, type: 2}
@@ -788,7 +808,7 @@ MonoBehaviour:
   RookButton: {fileID: 1095513391}
   BishopButton: {fileID: 255313674}
   KnightButton: {fileID: 138350377}
-  EndGamePanel: {fileID: 0}
+  EndGamePanel: {fileID: 802100377}
   winText: {fileID: 910696250}
 --- !u!4 &984692374
 Transform:
@@ -818,6 +838,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightPrefab: {fileID: 1394182303016312, guid: c264e32c20468e54a815fc078e3a100b,
     type: 2}
+--- !u!114 &984692376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 984692372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d27a31506a340b42939270f3656fdf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlights: []
+  chessmanPrefabs:
+  - {fileID: 1211110205303578, guid: e66e533d9e93b77419f4714e0fd15c76, type: 2}
+  - {fileID: 1139144649621996, guid: b1efa3f627a075249b514d4d6a817ed8, type: 2}
+  - {fileID: 1451150441598584, guid: aeba295863110ce4d82e9bfc0fe7a612, type: 2}
+  - {fileID: 1177101242561532, guid: 46b037977a52fa447ad79e47082a845b, type: 2}
+  - {fileID: 1873205831917510, guid: cbd26849e56cdbd4abea1da8c6c37330, type: 2}
+  - {fileID: 1591515078546140, guid: 0bac95fe908f235428fb6cf2745ecb13, type: 2}
+  - {fileID: 1703393790541324, guid: 31be9ab4bebec89439439dcc1de66980, type: 2}
+  - {fileID: 1378919492614224, guid: bea93829e12637342b0a2884938c6cd3, type: 2}
+  - {fileID: 1564827797397492, guid: ce4f142b335f3ba4295c50220806e32f, type: 2}
+  - {fileID: 1532330647187194, guid: 41bbf732c37c1e749af525579a7d3cb6, type: 2}
+  - {fileID: 1062227884685158, guid: a74bdf87646f03141bcd9065147d870f, type: 2}
+  - {fileID: 1863083837753424, guid: 9878c0c9e7ece7248bc56f51f7a54ff1, type: 2}
+  selectedMat: {fileID: 2100000, guid: bc04e0cb4e7f11b44aa1877dc3781395, type: 2}
+  isWhiteTurn: 1
+  ButtonPanels: {fileID: 0}
+  QueenButton: {fileID: 1316696721}
+  RookButton: {fileID: 1095513391}
+  BishopButton: {fileID: 255313674}
+  KnightButton: {fileID: 138350377}
+  EndGamePanel: {fileID: 802100377}
+  winText: {fileID: 910696250}
 --- !u!1 &1028203679
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,7 +1021,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1095513392}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1874378221}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1095513392
@@ -1014,7 +1079,7 @@ GameObject:
   - component: {fileID: 1140434299}
   - component: {fileID: 1140434298}
   - component: {fileID: 1140434297}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: chessplane
   m_TagString: chessplane
   m_Icon: {fileID: 0}
@@ -1162,7 +1227,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1316696722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1874378221}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: QueenButton
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1316696722
@@ -1286,7 +1362,7 @@ GameObject:
   - component: {fileID: 1661046899}
   m_Layer: 5
   m_Name: QuitButton
-  m_TagString: Untagged
+  m_TagString: QuitButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1403,7 +1479,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1661046894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 561a30fd18846ed4abb8f63ceb505f05, type: 3}
+  m_Script: {fileID: 11500000, guid: 36bcf3e35b05afc47b67d550c3edcbb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1704382913
@@ -1573,7 +1649,6 @@ GameObject:
   - component: {fileID: 1874378222}
   - component: {fileID: 1874378224}
   - component: {fileID: 1874378223}
-  - component: {fileID: 1874378225}
   m_Layer: 5
   m_Name: ButtonPanel
   m_TagString: ButtonPanel
@@ -1636,17 +1711,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1874378221}
---- !u!114 &1874378225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1874378221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dc2e37d7b4bd824ba1c5b4699167859, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1921668472
 GameObject:
   m_ObjectHideFlags: 0

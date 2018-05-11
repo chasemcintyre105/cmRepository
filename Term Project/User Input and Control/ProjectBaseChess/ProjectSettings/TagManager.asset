@@ -23,6 +23,8 @@ TagManager:
   - whitewintext
   - blackwintext
   - chessplane
+  - RestartButton
+  - QuitButton
   layers:
   - Default
   - TransparentFX

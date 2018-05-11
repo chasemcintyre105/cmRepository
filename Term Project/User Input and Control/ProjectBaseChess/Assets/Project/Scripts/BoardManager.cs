@@ -147,7 +147,7 @@ namespace Project
 						Button KWbtn = KnightButton.GetComponent<Button> ();
 						KWbtn.onClick.AddListener(delegate{pawntoKnightWhite(x, y);});
 
-						SpawnChessman (1, x, y);//No longer in Bina's
+						//SpawnChessman (1, x, y);//No longer in Bina's
 						selectedChessman = Chessmans [x, y];
 
 					} else if (y == 0) {
@@ -163,7 +163,7 @@ namespace Project
 						Button KBbtn = KnightButton.GetComponent<Button> ();
 						KBbtn.onClick.AddListener(delegate{pawntoKnightBlack(x, y);});						
 
-						SpawnChessman (7, x, y);//No longer in Bina's
+						//SpawnChessman (7, x, y);//No longer in Bina's
 						selectedChessman = Chessmans [x, y];
 					}
 
