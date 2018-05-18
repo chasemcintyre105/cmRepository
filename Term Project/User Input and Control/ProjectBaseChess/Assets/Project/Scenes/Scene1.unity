@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 1647079798}
   - component: {fileID: 1647079797}
   - component: {fileID: 1647079799}
+  - component: {fileID: 1647079800}
   m_Layer: 0
   m_Name: ChessBoard
   m_TagString: Untagged
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d27a31506a340b42939270f3656fdf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highlights: []
   chessmanPrefabs:
   - {fileID: 1273725991896454, guid: 973983e22257f4007b9b0bb5ccae1184, type: 2}
   - {fileID: 1639620864090624, guid: ff7e7084bc927405da871cf1faa802ab, type: 2}
@@ -363,6 +365,20 @@ MonoBehaviour:
   - {fileID: 1031636751254628, guid: 7302be28962c243678252e7c6255fdbc, type: 2}
   selectedMat: {fileID: 2100000, guid: bc04e0cb4e7f11b44aa1877dc3781395, type: 2}
   isWhiteTurn: 1
+  ButtonPanel: {fileID: 0}
+  QueenButton: {fileID: 0}
+  RookButton: {fileID: 0}
+  BishopButton: {fileID: 0}
+  KnightButton: {fileID: 0}
+  EndGamePanel: {fileID: 0}
+  winText: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 871d0d53870b5ad4c8143dfe559c89e4, type: 3}
+  - {fileID: 8300000, guid: 40836d0092d31854c86cc318d5124510, type: 3}
+  - {fileID: 8300000, guid: 3a93c78412a46f649b0e65e3147a4576, type: 3}
+  - {fileID: 8300000, guid: fa504d1d6507a7c4381edc954dc87452, type: 3}
+  - {fileID: 8300000, guid: 3f74c4ee3416d0e41916f3448e66eb7d, type: 3}
+  - {fileID: 8300000, guid: f4a8c0c7a8d7de94aa15564b2136336d, type: 3}
 --- !u!4 &1647079798
 Transform:
   m_ObjectHideFlags: 0
@@ -390,6 +406,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightPrefab: {fileID: 1077809064918596, guid: 761f5fb86e187534abb2e6ee1800961a,
     type: 2}
+--- !u!82 &1647079800
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647079796}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1687373562
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -475,6 +475,7 @@ GameObject:
   - component: {fileID: 1647079798}
   - component: {fileID: 1647079797}
   - component: {fileID: 1647079799}
+  - component: {fileID: 1647079800}
   m_Layer: 0
   m_Name: ChessBoard
   m_TagString: Untagged
@@ -504,7 +505,7 @@ MonoBehaviour:
   - {fileID: 1703393790541324, guid: 31be9ab4bebec89439439dcc1de66980, type: 2}
   - {fileID: 1378919492614224, guid: bea93829e12637342b0a2884938c6cd3, type: 2}
   - {fileID: 1564827797397492, guid: ce4f142b335f3ba4295c50220806e32f, type: 2}
-  - {fileID: 1532330647187194, guid: 41bbf732c37c1e749af525579a7d3cb6, type: 2}
+  - {fileID: 1328104196702754, guid: 41bbf732c37c1e749af525579a7d3cb6, type: 2}
   - {fileID: 1062227884685158, guid: a74bdf87646f03141bcd9065147d870f, type: 2}
   - {fileID: 1863083837753424, guid: 9878c0c9e7ece7248bc56f51f7a54ff1, type: 2}
   selectedMat: {fileID: 2100000, guid: bc04e0cb4e7f11b44aa1877dc3781395, type: 2}
@@ -516,6 +517,13 @@ MonoBehaviour:
   KnightButton: {fileID: 502457336}
   EndGamePanel: {fileID: 1075721064}
   winText: {fileID: 859971765}
+  clips:
+  - {fileID: 8300000, guid: 871d0d53870b5ad4c8143dfe559c89e4, type: 3}
+  - {fileID: 8300000, guid: 40836d0092d31854c86cc318d5124510, type: 3}
+  - {fileID: 8300000, guid: 3a93c78412a46f649b0e65e3147a4576, type: 3}
+  - {fileID: 8300000, guid: fa504d1d6507a7c4381edc954dc87452, type: 3}
+  - {fileID: 8300000, guid: 3f74c4ee3416d0e41916f3448e66eb7d, type: 3}
+  - {fileID: 8300000, guid: f4a8c0c7a8d7de94aa15564b2136336d, type: 3}
 --- !u!4 &1647079798
 Transform:
   m_ObjectHideFlags: 0
@@ -541,8 +549,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d7a265e5e8a7f4caa38ce270738843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightPrefab: {fileID: 1077809064918596, guid: 761f5fb86e187534abb2e6ee1800961a,
+  highlightPrefab: {fileID: 1447972143881608, guid: d5f6e72cb57bed5419e419f3dcde1bc2,
     type: 2}
+--- !u!82 &1647079800
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647079796}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1687373562
 GameObject:
   m_ObjectHideFlags: 0
