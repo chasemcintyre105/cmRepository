@@ -253,7 +253,7 @@ namespace Project
 
 			//Spawns White Knights
 			SpawnChessman (4, 1, 0);
-			SpawnChessman (4, 6, 2);
+			SpawnChessman (4, 6, 0);
 
 			//pawns
 			for (int i = 0; i < 8; i++){
