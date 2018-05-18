@@ -1,30 +1,18 @@
 fileFormatVersion: 2
-guid: 122a3a8cf1eeecd479db9d4a75aba815
-timeCreated: 1520985885
+guid: 11114171c45fb7f45b70be40582d69d0
+timeCreated: 1526608934
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Cylinder
-    100002: //RootNode
-    100004: Sphere
-    100006: Sphere_001
-    400000: Cylinder
-    400002: //RootNode
-    400004: Sphere
-    400006: Sphere_001
-    2100000: Material_003
-    2100002: Material_002
-    2100004: Material_001
-    2300000: Cylinder
-    2300002: Sphere
-    2300004: Sphere_001
-    3300000: Cylinder
-    3300002: Sphere
-    3300004: Sphere_001
-    4300000: Sphere_001
-    4300002: Sphere
-    4300004: Cylinder
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material_001
+    2100002: Material_003
+    2100004: Material_002
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: queen
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

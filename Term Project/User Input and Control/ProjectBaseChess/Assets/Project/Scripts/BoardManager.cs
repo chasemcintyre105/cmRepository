@@ -32,7 +32,7 @@ namespace Project
 
 		public int[] EnPassantMove{ set; get; }
 
-//		private Quaternion orientation = Quaternion.Euler (0, 90, 0);//Bina's Board
+		//		private Quaternion orientation = Quaternion.Euler (0, 90, 0);//Bina's Board
 		//private Quaternion orientation = Quaternion.Euler (90, 0, 0);
 		private Quaternion orientation = Quaternion.Euler (-90, 0, 0);
 
@@ -89,10 +89,10 @@ namespace Project
 		private void SelectChessman (int x, int y) //responsible for selecting a piece
 		{
 			if (Chessmans [x, y] == null) //check if piece exists
-			return;
+				return;
 
 			if (Chessmans [x, y].isWhite != isWhiteTurn) //check for which players turn
-			return;
+				return;
 
 			bool hasAtleastOneMove = false;
 			allowedMoves = Chessmans [x, y].PossibleMove ();//figuring out allowed moves
@@ -103,7 +103,7 @@ namespace Project
 
 			if (!hasAtleastOneMove)
 				return;
-		
+
 			selectedChessman = Chessmans [x, y]; 			
 			//selectedChessman.transform.position = new Vector3 (selectedChessman.CurrentX, selectedChessman.transform.position.y + 0.25f, selectedChessman.CurrentY);
 			previousMat = selectedChessman.GetComponent<MeshRenderer> ().material;//not in Bina's
@@ -135,10 +135,10 @@ namespace Project
 				}
 				if (x == EnPassantMove [0] && y == EnPassantMove [1]) {
 					if (isWhiteTurn)	
-					//white turn
+						//white turn
 						c = Chessmans [x, y - 1];
 					else	
-					//black turn
+						//black turn
 						c = Chessmans [x, y + 1];
 
 					activeChessman.Remove (c.gameObject);
@@ -191,7 +191,7 @@ namespace Project
 						EnPassantMove [1] = y + 1;
 					}
 				}
-				
+
 				Chessmans [selectedChessman.CurrentX, selectedChessman.CurrentY] = null;
 				selectedChessman.transform.position = GetTileCenter (x, y);
 				selectedChessman.SetPosition (x, y); // allows for moving the same piece twice
@@ -223,7 +223,7 @@ namespace Project
 		private void SpawnChessman (int index, int x, int y) // Spawns pieces
 		{
 			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), orientation) as GameObject;//This line is
-//			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;// This line is not in bina or tutor
+			//			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;// This line is not in bina or tutor
 			go.transform.SetParent (transform);
 			Chessmans [x, y] = go.GetComponent<Chessman> ();
 			Chessmans [x, y].SetPosition (x, y);
@@ -237,23 +237,23 @@ namespace Project
 			EnPassantMove = new int[2]{ -1, -1 }; 
 			//spawn the white team
 
- 			//Spawns White King
+			//Spawns White King
 			SpawnChessman (0, 3, 0);
-			
-			 //Spawns White Queen
+
+			//Spawns White Queen
 			SpawnChessman (1, 4, 0);
 
-			 //Spawns White Rooks 
+			//Spawns White Rooks 
 			SpawnChessman (2, 0, 0);
 			SpawnChessman (2, 7, 0);
 
-			 //Spawns White Bishops
+			//Spawns White Bishops
 			SpawnChessman (3, 2, 0);
 			SpawnChessman (3, 5, 0);
 
-			 //Spawns White Knights
+			//Spawns White Knights
 			SpawnChessman (4, 1, 0);
-			SpawnChessman (4, 6, 0);
+			SpawnChessman (4, 6, 2);
 
 			//pawns
 			for (int i = 0; i < 8; i++){
@@ -263,18 +263,18 @@ namespace Project
 
 			//king
 			SpawnChessman (6, 4, 7); //Spawns Black King
-			
+
 			//queen
 			SpawnChessman (7, 3, 7); //Spawns Black Queen
-			
+
 			//rook
 			SpawnChessman (8, 0, 7); //Spawns Black Rooks
 			SpawnChessman (8, 7, 7);
-			
+
 			//bishop
 			SpawnChessman (9, 2, 7); //Spawns Black Bishops
 			SpawnChessman (9, 5, 7);
-			
+
 			//knight
 			SpawnChessman (10, 1, 7); //Spawns Black Knights
 			SpawnChessman (10, 6, 7);
@@ -380,9 +380,9 @@ namespace Project
 				Debug.Log ("Black Team Wins!");
 				winText.text = "Black Team Wins!";				
 			}
-			
+
 			EndGamePanel.SetActive (true);
-						
+
 			foreach (GameObject go in activeChessman)
 				Destroy (go);
 

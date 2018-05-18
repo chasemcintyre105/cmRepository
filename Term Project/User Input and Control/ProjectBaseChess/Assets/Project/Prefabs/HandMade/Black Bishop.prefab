@@ -9,20 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1725265798427948}
+  m_RootGameObject: {fileID: 1717351753057330}
   m_IsPrefabParent: 1
---- !u!1 &1725265798427948
+--- !u!1 &1717351753057330
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4137432649784392}
-  - component: {fileID: 33607308536821100}
-  - component: {fileID: 23133142136278822}
-  - component: {fileID: 95983258188820530}
-  - component: {fileID: 114240205820672664}
+  - component: {fileID: 4221341092261532}
+  - component: {fileID: 33063796133441840}
+  - component: {fileID: 23826751975770324}
+  - component: {fileID: 95350675288632994}
+  - component: {fileID: 114594954449068620}
   m_Layer: 0
   m_Name: Black Bishop
   m_TagString: Untagged
@@ -30,25 +30,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4137432649784392
+--- !u!4 &4221341092261532
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1725265798427948}
+  m_GameObject: {fileID: 1717351753057330}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 7, y: 0, z: 4}
+  m_LocalPosition: {x: 44.340706, y: 23.554195, z: 11.359874}
   m_LocalScale: {x: 0.2441366, y: 0.2441718, z: 0.04514759}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23133142136278822
+--- !u!23 &23826751975770324
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1725265798427948}
+  m_GameObject: {fileID: 1717351753057330}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5c6ee78508c90dc40827dafc2daed2e2, type: 3}
+  - {fileID: 2100000, guid: 7635b9d47f1c3bf419b704fe0258121c, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,22 +77,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33607308536821100
+--- !u!33 &33063796133441840
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1725265798427948}
-  m_Mesh: {fileID: 4300000, guid: 5c6ee78508c90dc40827dafc2daed2e2, type: 3}
---- !u!95 &95983258188820530
+  m_GameObject: {fileID: 1717351753057330}
+  m_Mesh: {fileID: 4300000, guid: 7635b9d47f1c3bf419b704fe0258121c, type: 3}
+--- !u!95 &95350675288632994
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1725265798427948}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5c6ee78508c90dc40827dafc2daed2e2, type: 3}
+  m_GameObject: {fileID: 1717351753057330}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: 7635b9d47f1c3bf419b704fe0258121c, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -101,12 +101,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114240205820672664
+--- !u!114 &114594954449068620
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1725265798427948}
+  m_GameObject: {fileID: 1717351753057330}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72e39240dd20f7448acf7d3e5fbcb249, type: 3}

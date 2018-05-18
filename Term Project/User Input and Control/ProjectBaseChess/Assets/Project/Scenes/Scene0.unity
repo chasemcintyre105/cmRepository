@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -226,6 +226,78 @@ Prefab:
       propertyPath: m_Name
       value: ChessBoard
       objectReference: {fileID: 0}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1274428912765252, guid: 11fa4501ecc31744e845aa41e1551748,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1987590352698150, guid: d54d586b14cb73b4f88e2285dd502856,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1734145652612604, guid: 46761d9b7b828ad4cb3df34b49bcb253,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1132826121927302, guid: 4504b9a892c9fc04db4be31a50a4eed1,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1503922553625814, guid: c14684e3711afdc45a08a7140cabe352,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 1855690318086642, guid: f5ba8ce36cffda4458460f7a6f6cdb89,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 1956229815603714, guid: e79b6f6b2cf97554f8d5af57fef6c9af,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 1270577604361252, guid: 8d019fe3abda39b4893f9c8a659ca963,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[8]
+      value: 
+      objectReference: {fileID: 1945707202771280, guid: a5ad29adcdf4c384cb442db291d8acf8,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[9]
+      value: 
+      objectReference: {fileID: 1717351753057330, guid: 13e2bda74e0acaa47a0d3a1580120322,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[10]
+      value: 
+      objectReference: {fileID: 1061397291235782, guid: 636638a5f4cd03e45b676fe803646865,
+        type: 2}
+    - target: {fileID: 114839154000005260, guid: 0e1aef860a9205e4bb0326aa56901627,
+        type: 2}
+      propertyPath: chessmanPrefabs.Array.data[11]
+      value: 
+      objectReference: {fileID: 1857349916541114, guid: 81df72445b20dcf4b9fd7ee3c70a483f,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e1aef860a9205e4bb0326aa56901627, type: 2}
   m_IsPrefabParent: 0

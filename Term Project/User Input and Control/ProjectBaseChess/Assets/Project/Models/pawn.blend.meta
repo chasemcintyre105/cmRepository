@@ -1,24 +1,17 @@
 fileFormatVersion: 2
-guid: 95743f6bc5fc4bc4d9273731bd3d2b2a
-timeCreated: 1520985894
+guid: 63a28c7ca4e95584f80fd04b0537a049
+timeCreated: 1526608940
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Cylinder
-    100002: //RootNode
-    100004: Sphere
-    400000: Cylinder
-    400002: //RootNode
-    400004: Sphere
-    2100000: Material_001
-    2100002: Material
-    2300000: Cylinder
-    2300002: Sphere
-    3300000: Cylinder
-    3300002: Sphere
-    4300000: Sphere
-    4300002: Cylinder
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material
+    2100002: Material_001
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pawn
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

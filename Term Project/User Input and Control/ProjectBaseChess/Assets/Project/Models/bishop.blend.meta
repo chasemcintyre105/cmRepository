@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b3dfda431bfb1544892ab02864e503fb
-timeCreated: 1520985897
+guid: 01b24bda1213a6d43a7804bc0136c2ba
+timeCreated: 1526608924
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: Material
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder
+    4300000: bishop
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
