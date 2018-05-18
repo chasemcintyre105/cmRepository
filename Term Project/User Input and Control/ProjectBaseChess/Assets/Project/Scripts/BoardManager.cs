@@ -32,8 +32,10 @@ namespace Project
 
 		public int[] EnPassantMove{ set; get; }
 
-//		private Quaternion orientation = Quaternion.Euler (90, 0, 0);//(0, 90, 0) is in Bina or tutorial
-		private Quaternion orientation = Quaternion.Euler (0, 90, 0);//Bina's Board
+//		private Quaternion orientation = Quaternion.Euler (0, 90, 0);//Bina's Board
+		//private Quaternion orientation = Quaternion.Euler (90, 0, 0);
+		private Quaternion orientation = Quaternion.Euler (-90, 0, 0);
+
 		public bool isWhiteTurn = true;
 
 		public GameObject ButtonPanel;
@@ -46,6 +48,11 @@ namespace Project
 
 		public Text winText;	
 
+		private AudioSource audioSource;
+		public AudioClip[] clips;
+		private AudioClip clip;
+		private AudioClip destroy;
+
 		private void Start ()
 		{
 			Instance = this;
@@ -56,12 +63,15 @@ namespace Project
 			ButtonPanel.SetActive(false);
 
 			winText.text = "";
+			audioSource = GetComponent<AudioSource> ();
+			destroy = clips [5];			
 		}
 
 		private void Update ()
 		{
 			UpdateSelection ();
 			DrawChessboard ();
+			clip = clips[Random.Range (0, 4)];			
 
 			if (Input.GetMouseButtonDown (0)) { //for cursor selection
 				if (selectionX >= 0 && selectionY >= 0) {
@@ -106,6 +116,8 @@ namespace Project
 		private void MoveChessman (int x, int y) //responsible for moving a piece
 		{
 			if (allowedMoves [x, y]) { //Move piece if possible
+				audioSource.PlayOneShot (clip, 1.0f);
+
 				Chessman c = Chessmans [x, y];
 
 				if (c != null && c.isWhite != isWhiteTurn) {
@@ -119,6 +131,7 @@ namespace Project
 					}
 					activeChessman.Remove (c.gameObject); //Destroy the piece if captured
 					Destroy (c.gameObject);
+					audioSource.PlayOneShot (destroy, 1.0f);					
 				}
 				if (x == EnPassantMove [0] && y == EnPassantMove [1]) {
 					if (isWhiteTurn)	
@@ -130,6 +143,7 @@ namespace Project
 
 					activeChessman.Remove (c.gameObject);
 					Destroy (c.gameObject);
+					audioSource.PlayOneShot (destroy, 1.0f);					
 				}
 				EnPassantMove [0] = -1;
 				EnPassantMove [1] = -1;
@@ -137,6 +151,7 @@ namespace Project
 					if (y == 7) {
 						activeChessman.Remove (selectedChessman.gameObject);
 						Destroy (selectedChessman.gameObject);
+						audioSource.PlayOneShot (destroy, 1.0f);						
 						ButtonPanel.SetActive (true);
 						Button QWbtn = QueenButton.GetComponent<Button> ();
 						QWbtn.onClick.AddListener(delegate{pawntoQueenWhite(x, y);});
@@ -153,6 +168,7 @@ namespace Project
 					} else if (y == 0) {
 						activeChessman.Remove (selectedChessman.gameObject);
 						Destroy (selectedChessman.gameObject);
+						audioSource.PlayOneShot (destroy, 1.0f);						
 						ButtonPanel.SetActive (true);
 						Button QBbtn = QueenButton.GetComponent<Button> ();
 						QBbtn.onClick.AddListener(delegate{pawntoQueenBlack(x, y);});
@@ -206,8 +222,8 @@ namespace Project
 
 		private void SpawnChessman (int index, int x, int y) // Spawns pieces
 		{
-//			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;// This line is not in bina or tutor
 			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), orientation) as GameObject;//This line is
+//			GameObject go = Instantiate (chessmanPrefabs [index], GetTileCenter (x, y), Quaternion.Euler (90, 0, 0)) as GameObject;// This line is not in bina or tutor
 			go.transform.SetParent (transform);
 			Chessmans [x, y] = go.GetComponent<Chessman> ();
 			Chessmans [x, y].SetPosition (x, y);
@@ -240,9 +256,9 @@ namespace Project
 			SpawnChessman (4, 6, 0);
 
 			//pawns
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 8; i++){
 				SpawnChessman (5, i, 1); //Spawn White Pawns
-
+			}
 			//spawn the black team
 
 			//king
@@ -264,9 +280,9 @@ namespace Project
 			SpawnChessman (10, 6, 7);
 
 			//pawn
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 8; i++){
 				SpawnChessman (11, i, 6); //Spawn Black Pawns	
-
+			}
 		}
 
 		private Vector3 GetTileCenter (int x, int y)  //Spawn Position Function, gets the center point on the tile

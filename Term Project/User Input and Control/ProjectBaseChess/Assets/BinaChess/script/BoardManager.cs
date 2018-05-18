@@ -36,7 +36,7 @@ namespace BinaChess
 
 		public bool isWhiteTurn = true;
 
-		public GameObject ButtonPanels;
+		public GameObject ButtonPanel;
 		public Button QueenButton;
 		public Button RookButton;
 		public Button BishopButton;
@@ -46,29 +46,37 @@ namespace BinaChess
 
 		public Text winText;
 
+		private AudioSource audioSource;
+		public AudioClip[] clips;
+		private AudioClip clip;
+		private AudioClip destroy;
+
 		private void Start ()
 		{
 			Instance = this;
 			SpawnAllChessmans ();
-			ButtonPanels = GameObject.Find("ButtonPanel");
+			ButtonPanel = GameObject.Find("ButtonPanel");
 			EndGamePanel = GameObject.Find ("EndGamePanel");
 			EndGamePanel.SetActive (false);
-			ButtonPanels.SetActive(false);
+			ButtonPanel.SetActive(false);
 
 			winText.text = "";
+			audioSource = GetComponent<AudioSource> ();
+			destroy = clips [5];
 		}
 
 		private void Update ()
 		{
 			UpdateSelection ();
 			DrawChessBoard ();
+			clip = clips[Random.Range (0, 4)];
 
 			if (Input.GetMouseButtonDown (0)) {
 				if (selectionX >= 0 && selectionY >= 0) {
 					if (selectedChessman == null) {
 						//select the chessman
 						SelectChessman (selectionX, selectionY);
-					} else {				
+					} else {		
 						//move the chessman
 						MoveChessman (selectionX, selectionY);
 					}
@@ -106,6 +114,8 @@ namespace BinaChess
 		private void MoveChessman (int x, int y)
 		{
 			if (allowedMoves [x, y]) {
+				audioSource.PlayOneShot (clip, 1.0f);
+
 				Chessman c = Chessmans [x, y];
 
 				if (c != null && c.isWhite != isWhiteTurn) {
@@ -119,6 +129,7 @@ namespace BinaChess
 					}
 					activeChessman.Remove (c.gameObject);
 					Destroy (c.gameObject);
+					audioSource.PlayOneShot (destroy, 1.0f);
 				}
 				if (x == EnPassantMove [0] && y == EnPassantMove [1]) {
 					if (isWhiteTurn) 
@@ -130,6 +141,7 @@ namespace BinaChess
 
 					activeChessman.Remove (c.gameObject);
 					Destroy (c.gameObject);
+					audioSource.PlayOneShot (destroy, 1.0f);
 				}
 				EnPassantMove [0] = -1;
 				EnPassantMove [1] = -1;
@@ -137,7 +149,8 @@ namespace BinaChess
 					if (y == 7) {
 						activeChessman.Remove (selectedChessman.gameObject);
 						Destroy (selectedChessman.gameObject);
-						ButtonPanels.SetActive (true);
+						audioSource.PlayOneShot (destroy, 1.0f);
+						ButtonPanel.SetActive (true);
 						Button QWbtn = QueenButton.GetComponent<Button> ();
 						QWbtn.onClick.AddListener(delegate{pawntoQueenWhite(x, y);});
 						Button RWbtn = RookButton.GetComponent<Button> ();
@@ -153,7 +166,8 @@ namespace BinaChess
 					} else if (y == 0) {
 						activeChessman.Remove (selectedChessman.gameObject);
 						Destroy (selectedChessman.gameObject);
-						ButtonPanels.SetActive (true);
+						audioSource.PlayOneShot (destroy, 1.0f);
+						ButtonPanel.SetActive (true);
 						Button QBbtn = QueenButton.GetComponent<Button> ();
 						QBbtn.onClick.AddListener(delegate{pawntoQueenBlack(x, y);});
 						Button RBbtn = RookButton.GetComponent<Button> ();
@@ -182,7 +196,7 @@ namespace BinaChess
 				Chessmans [x, y] = selectedChessman;
 				isWhiteTurn = !isWhiteTurn;
 			}
-
+			
 
 			BoardHighlights.Instance.HideHighlights ();
 			selectedChessman = null;
@@ -298,7 +312,7 @@ namespace BinaChess
 					Vector3.forward * (selectionY + 1) + Vector3.right * (selectionX + 1));
 				Debug.DrawLine (
 					Vector3.forward * (selectionY + 1) + Vector3.right * selectionX,
-					Vector3.forward * selectionY + Vector3.right * (selectionX + 1));	
+					Vector3.forward * selectionY + Vector3.right * (selectionX + 1));		
 			}
 		}
 
@@ -307,25 +321,25 @@ namespace BinaChess
 
 			Debug.Log ("Queen button is clicked");
 			SpawnChessman (1, x, y);
-			ButtonPanels.SetActive (false);
+			ButtonPanel.SetActive (false);
 		}
 		void pawntoRookWhite(int x, int y){
 
 			Debug.Log ("Rook button is clicked");
 			SpawnChessman (2, x, y);
-			ButtonPanels.SetActive (false);
+			ButtonPanel.SetActive (false);
 		}
 		void pawntoBishopWhite(int x, int y){
 
 			Debug.Log ("Bishop button is clicked");
 			SpawnChessman (3, x, y);
-			ButtonPanels.SetActive (false);
+			ButtonPanel.SetActive (false);
 		}
 		void pawntoKnightWhite(int x, int y){
 
 			Debug.Log ("Knight button is clicked");
 			SpawnChessman (4, x, y);
-			ButtonPanels.SetActive (false);
+			ButtonPanel.SetActive (false);
 		}
 
 		//Black
@@ -333,25 +347,25 @@ namespace BinaChess
 
 			Debug.Log ("Queen button is clicked");
 			SpawnChessman (7, x, y);
-			ButtonPanels.SetActive (false);
+			ButtonPanel.SetActive (false);
 		}
 		void pawntoRookBlack(int x, int y){
 
 			Debug.Log ("Rook button is clicked");
 			SpawnChessman (8, x, y);
-			ButtonPanels.SetActive (false);
+			ButtonPanel.SetActive (false);
 		}
 		void pawntoBishopBlack(int x, int y){
 
 			Debug.Log ("Bishop button is clicked");
 			SpawnChessman (9, x, y);
-			ButtonPanels.SetActive (false);
+			ButtonPanel.SetActive (false);
 		}
 		void pawntoKnightBlack(int x, int y){
 
 			Debug.Log ("Knight button is clicked");
 			SpawnChessman (10, x, y);
-			ButtonPanels.SetActive (false);
+			ButtonPanel.SetActive (false);
 		}
 
 		private void EndGame ()
